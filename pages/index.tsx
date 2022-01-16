@@ -1,9 +1,19 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { getSortedProjectsData } from '../lib/projects'
 
-const Home: NextPage = () => {
+export default function Home({
+  allProjectsData
+}: {
+  allProjectsData: {
+    date: string
+    title: string
+    id: string
+  }[]
+}){
+  console.log(allProjectsData, "all projects data")
   return (
     <div className={styles.container}>
       <Head>
@@ -51,6 +61,18 @@ const Home: NextPage = () => {
             </p>
           </a>
         </div>
+        <ul>
+          {/* @ts-ignore */}
+          {allProjectsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul>
       </main>
 
       <footer className={styles.footer}>
@@ -69,4 +91,11 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export const getStaticProps: GetStaticProps = async () => {
+  const allProjectsData = getSortedProjectsData()
+  return {
+    props: {
+      allProjectsData
+    }
+  }
+}
