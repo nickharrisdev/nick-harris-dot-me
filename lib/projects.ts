@@ -25,7 +25,6 @@ export function getSortedProjectsData(): any {
     };
   });
   // Sort posts by date
-  // @ts-ignore
   return allProjectsData;
   // return allProjectsData.sort(({ date: a }, { date: b }) => {
   //   if (a < b) {
