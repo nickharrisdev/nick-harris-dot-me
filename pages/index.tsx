@@ -20,23 +20,55 @@ export default function Home({
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.89em%22 font-size=%22100%22>🧑🏻‍💻</text></svg>"
         />
-        <script src="https://kit.fontawesome.com/7b5f7f4b99.js"></script>
+        {/* @ts-ignore */}
+        {/* <script src="https://kit.fontawesome.com/7b5f7f4b99.js" defer="defer"></script> */}
       </Head>
 
       <main className={styles.main}>
         {/* top section */}
-        <h1 className={styles.title}>
-          Nick Harris
-        </h1>
-        {/* bio */}
-        <p className={styles.description}>
-          I'm a Chicago-based web developer currently working on the front end at Rheaply. I'm also a multi-instrumentalist singer/songwriter. Whether it's a album or a web application, I love building things.
-        </p>
+        <div className={styles.titleSummaryContainer}>
+          <h1>
+            Nick Harris
+          </h1>
+          <p>
+            Web developer | Musician
+          </p>
+          <p>
+            Chicago, Illinois
+          </p>
+        </div>
+
+        {/* nav */}
+        <nav className={styles.nav}>
+          {/* projects */}
+          <a href="#projects">Projects</a>
+          {/* discography */}
+          <Link href="/music">
+            <a>Discography</a>  
+          </Link>
+          {/* contact */}
+          <a href="#contact">Contact</a>
+        </nav>
+      
+        {/* projects list */}
+        <h2 id="projects">
+          Projects
+        </h2>
+        <ul>
+          {allProjectsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul>
+
         {/* links */}
-        <p className={styles.description}>
-          Let's connect!
-        </p>
-        <div className="flex">
+        <div id="contact" className={styles.contactIconsContainer}>
+          <h2>Get in touch</h2>
           <a href="https://www.linkedin.com/in/nick-harris-web-dev/" rel="noreferrer" aria-label="Linked In" className="no-underline" target="_blank">
             <i className="fab fa-linkedin fa-3x mr-2 text-primary-500"></i>
           </a>
@@ -49,27 +81,13 @@ export default function Home({
           <a href="mailto:nick@nickharris.me" className="no-underline" target="_blank" rel="noreferrer" aria-label="Email">
             <i className="far fa-envelope fa-3x mx-2 text-primary-500"></i>
           </a>
-      </div>
-        {/* section with icons as links */}
-        <Link href="/music">
-          <a>My music</a>
-        </Link>
-        {/* projects list */}
-        <ul>
-          {allProjectsData.map(({ id, date, title }) => (
-            <li key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
-        </ul>
+        </div>  
       </main>
 
       {/* <footer className={styles.footer}>
       </footer> */}
+      {/* @ts-ignore */}
+           <script src="https://kit.fontawesome.com/7b5f7f4b99.js" defer="defer"></script>
     </div>
   )
 }
