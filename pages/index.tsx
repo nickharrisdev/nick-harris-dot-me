@@ -20,8 +20,6 @@ export default function Home({
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.89em%22 font-size=%22100%22>🧑🏻‍💻</text></svg>"
         />
-        {/* @ts-ignore */}
-        {/* <script src="https://kit.fontawesome.com/7b5f7f4b99.js" defer="defer"></script> */}
       </Head>
 
       <main className={styles.main}>
@@ -43,7 +41,7 @@ export default function Home({
           {/* projects */}
           <a href="#projects">Projects</a>
           {/* discography */}
-          <Link href="/music">
+          <Link href="/discography">
             <a>Discography</a>  
           </Link>
           {/* contact */}
