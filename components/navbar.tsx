@@ -25,8 +25,6 @@ export default function Navbar() {
         <Link href="/discography">
           <a>Discography</a>  
         </Link>
-        {/* contact */}
-        <a href="/">Contact</a>
       </nav>
     </>
   )
