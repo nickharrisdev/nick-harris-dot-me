@@ -1,9 +1,7 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import useSWR from 'swr'
 import Link from 'next/link'
-
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+import { HttpClient } from '../data-access/http-client'
 
 export default function Discography({
   props
@@ -17,41 +15,31 @@ export default function Discography({
   // todo: handle error
   // https://api.discogs.com/artists/6067515
   // https://api.discogs.com/artists/6067515/releases
+
+  const httpClient = new HttpClient();
+
   const { data, error } = useSWR(
     "https://api.discogs.com/artists/6067515/releases",
-    fetcher
+    httpClient.get
   );
 
   // if (error) return "An error has occurred.";
   // if (!data) return "Loading...";
 
-  console.log(data, "data")
+  // console.log(data, "data")
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Discography | Nick Harris</title>
-        <meta name="description" content="Discography of Nick Harris" />
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.89em%22 font-size=%22100%22>🧑🏻‍💻</text></svg>"
-        />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+    <>
+        <h2>
           Discography
-        </h1>
+        </h2>
 
         {/* list the releases */}
         <div>
           {/* @ts-ignore */}
           {data?.releases.map(({ title, artist }, index) => {
-            // clean up artist name
             const regex = /[0-9]/g;
-            artist = artist.replaceAll(regex, "");
-            artist = artist.replaceAll("(", "")
-            artist = artist.replaceAll(")", "")
+            artist = artist.replaceAll(regex, "").replaceAll("(", "").replaceAll(")", "");
             return (
               <p key={index}>
                 {title} by {artist}
@@ -61,10 +49,6 @@ export default function Discography({
         <Link href="/">
           <a>Go back</a>
         </Link>
-      </main>
-
-      {/* <footer className={styles.footer}>
-      </footer> */}
-    </div>
+    </>
   )
 }
