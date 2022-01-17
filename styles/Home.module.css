@@ -29,6 +29,16 @@
   margin: 0.5rem 0.5rem 0.5rem 0;
 }
 
+.faIcon {
+  max-width: 3em;
+  width: 100%;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+}
+
 .footer {
   display: flex;
   flex: 1;

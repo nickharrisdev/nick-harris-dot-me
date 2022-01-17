@@ -1,9 +1,10 @@
 import type { GetStaticProps } from 'next'
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import { getSortedProjectsData } from '../lib/projects'
 import { AllProjectsData } from '../domain/props.interface'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin, faMastodon } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Home({
@@ -32,18 +33,20 @@ export default function Home({
       {/* links */}
       <div id="contact" className={styles.contactIconsContainer}>
         <h2>Get in touch</h2>
-        <a href="https://www.linkedin.com/in/nick-harris-web-dev/" rel="noreferrer" aria-label="Linked In" className="no-underline" target="_blank">
-          <i className="fab fa-linkedin fa-3x mr-2 text-primary-500" aria-hidden></i>
-        </a>
-        <a href="https://www.github.com/nickharrisdev" className="no-underline" target="_blank" rel="noreferrer" aria-label="Github">
-          <i className="fab fa-github fa-3x mx-2 text-primary-500" aria-hidden></i>
-        </a>
-        <a href="https://fosstodon.org/@nickharris" className="no-underline" target="_blank" rel="noreferrer" aria-label="Mastadon">
-          <i className="fab fa-mastodon fa-3x mx-2 text-primary-500" aria-hidden></i>
-        </a>
-        <a href="mailto:nick@nickharris.me" className="no-underline" target="_blank" rel="noreferrer" aria-label="Email">
-          <i className="far fa-envelope fa-3x mx-2 text-primary-500" aria-hidden></i>
-        </a>
+        <div className={styles.iconsContainer}>
+          <a href="https://www.linkedin.com/in/nick-harris-web-dev/" rel="noreferrer" aria-label="Linked In" className="no-underline" target="_blank">
+            <FontAwesomeIcon icon={faLinkedin} className={styles.faIcon}/>
+          </a>
+          <a href="https://www.github.com/nickharrisdev" className="no-underline" target="_blank" rel="noreferrer" aria-label="Github">
+            <FontAwesomeIcon icon={faGithub} className={styles.faIcon}/>
+          </a>
+          <a href="https://fosstodon.org/@nickharris" className="no-underline" target="_blank" rel="noreferrer" aria-label="Mastadon">
+            <FontAwesomeIcon icon={faMastodon} className={styles.faIcon}/>
+          </a>
+          <a href="mailto:nick@nickharris.me" className="no-underline" target="_blank" rel="noreferrer" aria-label="Email">
+            <FontAwesomeIcon icon={faEnvelope} className={styles.faIcon}/>
+          </a>
+        </div>
       </div>  
     </>
   )
