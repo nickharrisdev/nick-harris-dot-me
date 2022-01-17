@@ -1,16 +1,12 @@
-import styles from '../styles/Home.module.css'
 import useSWR from 'swr'
 import Link from 'next/link'
 import { HttpClient } from '../data-access/http-client'
 
-export default function Discography({
-  props
-}: {
-  props: any;
-}){
+export default function Discography(){
   // need to use this combination of urls to get all the data needed from discogs.
   // first get releases of mine, then get more data about those releases for specifcs about my role
   // might be a good usecase for promise.all, but unsure why SWR doesn't use promises
+  // need to do a separate call to get Ricky Mirage releases
   // todo: move this func to another section of the app to handle data getting
   // todo: handle error
   // https://api.discogs.com/artists/6067515
