@@ -20,7 +20,9 @@ export default function Navbar() {
       {/* nav */}
       <nav className={styles.nav}>
         {/* projects */}
-        <a href="/">Projects</a>
+        <Link href="/">
+          <a>Projects</a>
+        </Link>
         {/* discography */}
         <Link href="/discography">
           <a>Discography</a>  
