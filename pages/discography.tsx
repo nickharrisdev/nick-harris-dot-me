@@ -14,15 +14,17 @@ export default function Discography(){
 
   const httpClient = new HttpClient();
 
-  const { data, error } = useSWR(
-    "https://api.discogs.com/artists/6067515/releases",
-    httpClient.get
-  );
+  const getArtistReleaseData = (id: string) => {
+    const { data, error } = useSWR(
+      `https://api.discogs.com/artists/${id}/releases`,
+      httpClient.get
+    );
+    return data;
+  }
 
-  // if (error) return "An error has occurred.";
-  // if (!data) return "Loading...";
-
-  // console.log(data, "data")
+  const nhReleaseData = getArtistReleaseData("6067515");
+  const rmReleaseData = getArtistReleaseData("10538149");
+  // console.log(nhReleaseData)
 
   return (
     <>
@@ -33,12 +35,24 @@ export default function Discography(){
         {/* list the releases */}
         <div>
           {/* @ts-ignore */}
-          {data?.releases.map(({ title, artist }, index) => {
+          {nhReleaseData?.releases.map(({ title, artist, year }, index) => {
             const regex = /[0-9]/g;
             artist = artist.replaceAll(regex, "").replaceAll("(", "").replaceAll(")", "");
             return (
               <p key={index}>
-                {title} by {artist}
+                {title} by {artist} ({year})
+              </p>
+            )})}
+        </div>
+        <h3>As Ricky Mirage:</h3>
+        <div>
+          {/* @ts-ignore */}
+          {rmReleaseData?.releases.map(({ title, artist, year }, index) => {
+            const regex = /[0-9]/g;
+            artist = artist.replaceAll(regex, "").replaceAll("(", "").replaceAll(")", "");
+            return (
+              <p key={index}>
+                {title} by {artist} ({year})
               </p>
             )})}
         </div>
