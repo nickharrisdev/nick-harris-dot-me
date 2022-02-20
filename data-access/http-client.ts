@@ -1,10 +1,7 @@
 export class HttpClient {
-  async get(url: string): Promise<Response> {
+  async get(url: string, headers?: HeadersInit): Promise<Response> {
     const res = await fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-        "Authorization": "Discogs key=JYcuHLihGmlfOIqEjUcr, secret=dzcaVkpiXDPFsUcAxETgUBBGKGAtFGGu"
-      },
+      headers,
     })
     return await res.json();
   };
