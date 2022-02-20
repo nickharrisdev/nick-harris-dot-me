@@ -1,0 +1,266 @@
+:root {
+  /* ====================
+    Colors
+    ==================== */
+  --color-base-900: #0e0d0b;
+  --color-base-800: #1f1c19;
+  --color-base-700: #2f210e;
+  --color-base-600: #35230d;
+  --color-base: #494036;
+  --color-base-500: var(--color-base);
+  --color-base-400: #786e5e;
+  --color-base-300: #c7b8a0;
+  --color-base-200: #eae2d7;
+  --color-base-100: #f0eeea;
+  --color-base-50: #f9f7f6;
+  --color-primary-900: #660e00;
+  --color-primary-800: #991f00;
+  --color-primary-700: #b32400;
+  --color-primary-600: #cc2900;
+  --color-primary: #eb4200;
+  --color-primary-500: var(--color-primary);
+  --color-primary-400: #ff621a;
+  --color-primary-300: #ff8952;
+  --color-primary-200: #ffab85;
+  --color-primary-100: #ffd1b8;
+  --color-primary-50: #fff1eb;
+  --color-secondary-900: #b25f00;
+  --color-secondary-800: #b25f00;
+  --color-secondary-700: #b25f00;
+  --color-secondary-600: #c68500;
+  --color-secondary: #ffb400;
+  --color-secondary-500: var(--color-secondary);
+  --color-secondary-400: #ffbd44;
+  --color-secondary-300: #ffe64c;
+  --color-secondary-200: #ffe64c;
+  --color-secondary-100: #ffe64c;
+  --color-secondary-50: #ffe64c;
+  --color-accent: #01fec5;
+  --color-off-white-700: #e3e0d8;
+  --color-off-white-600: #f0eeea;
+  --color-off-white: #fdfdfc;
+  --color-off-white-500: var(--color-off-white);
+  --color-surface-600: var(--color-off-white-600);
+  --color-surface: var(--color-off-white);
+  --color-surface-500: var(--color-surface);
+  --color-background: var(--color-off-white); /* #faf8f5 */
+  --color-success-100: #cffcd1;
+  --color-success: #128417;
+  --color-info: #694cea;
+  --color-pending: #b58d11;
+  --color-warning: #f0ad4e;
+  --color-error: #e61a1a;
+  --color-error-100: #f7baba;
+  --color-read: #f9f8f5;
+  --color-green-600: #3c4f2e;
+  --color-green: #40bb72;
+  --color-green-500: var(--color-green);
+  --color-disabled: rgba(120, 110, 94, 0.4);
+  --color-disabled-background: rgba(120, 110, 94, 0.1);
+  --color-disabled-label: var(--color-base-400);
+  --color-on-base: var(--color-off-white);
+  --color-on-surface: var(--color-base);
+  --color-on-background: var(--color-base);
+  --color-placeholder: #bcc3ce;
+
+  /* RGB */
+  --color-rgb-base-400: 120, 110, 94;
+  --color-rgb-base-300: 199, 184, 160;
+  --color-rgb-darker: 45, 32, 14;
+  --color-rgb-dark: 63, 36, 3;
+  --color-rgb-medium: 93, 80, 65;
+  --color-rgb-light: 117, 107, 92;
+  --color-rgb-lighter: 199, 184, 160;
+  --color-rgb-lightest: 234, 226, 215;
+  --color-rgb-off-white: 253, 253, 252;
+  --color-rgb-primary: 255, 127, 0;
+  --color-rgb-secondary: 255, 180, 0;
+  --color-rgb-accent: 1, 254, 197;
+  --color-rgb-success: 0, 136, 31;
+  --color-rgb-danger: 217, 83, 79;
+
+  /* Other */
+  --color-photo-background: #f3f1ec;
+  --color-menu-option-hover: rgba(var(--color-rgb-light), 0.1);
+  --color-selected-highlight: #fcefcf;
+  --color-noti: #f54040;
+
+  /* Links */
+  --link-color: var(--color-base-600);
+  --link-color-hover: var(--color-base-800);
+
+  /* Borders */
+  --color-border: var(--color-base-300);
+
+  /* Typograpy */
+  --heading-color: var(--color-base-600);
+  --line-height-base: 1.5;
+
+  /* colors - Shadows */
+  --shadow-primary: var(--color-primary-medium);
+  --box-shadow-rgb: 202, 196, 185;
+
+  /* Highlight */
+  --color-selection: #ffe051;
+
+  /* List item selected */
+  --color-selected-highlight: #fcefcf;
+
+  /* Interaction element states */
+  --color-interaction-600: rgba(199, 184, 160, 0.3);
+  --color-interaction-500: rgba(199, 184, 160, 0.2);
+  --color-interaction-400: rgba(199, 184, 160, 0.1);
+
+  /* Forms */
+  --form-control-background: transparent;
+  --form-control-border-color: var(--color-base-300);
+  --form-control-border-radius: var(--border-radius-sm);
+  --form-control-color: var(--color-base);
+
+  --form-control-border-color-focus: var(--color-base-600);
+  --form-control-border-color-hover: var(--form-control-border-color-focus);
+  --form-control-box-shadow-color-focus: var(--form-control-border-color-focus);
+  --form-control-height: var(--spacer-12);
+  --form-control-padding-x: var(--spacer-3);
+  --form-control-padding-y: 0;
+  --form-control-padding-left: var(--form-control-padding-x);
+  --form-control-padding-right: var(--form-control-padding-x);
+  --form-control-transition: border-color 100ms ease, box-shadow 100ms ease;
+
+  /*  */
+
+  --form-control-background-color-checked: var(--color-base-600);
+  --form-control-border-color-checked: var(--color-base-600);
+
+  --form-control-background-checked-hover: var(--color-base-600);
+  --form-control-background-checked-active: var(--color-base-600);
+
+  --form-control-background-checked: var(--color-base-600);
+  --form-control-background-checked-hover: var(--color-base-600);
+  --form-control-background-checked-active: var(--color-base-500);
+
+  --form-control-border-color-checked: var(--color-base-600);
+  --form-control-border-color-checked-hover: var(--color-base-600);
+
+  --form-switch-indicator-background: var(--color-base-300);
+  --form-checkbox-radio-label-spacer: 0.75rem;
+  --form-checkbox-radio-label-opacity-disabled: 0.6;
+  --select-option-hover: var(--color-lightest);
+  --select-option-focused: var(--color-base-300);
+  --select-option-selected: var(--color-lightest);
+
+  --helper-color: var(--color-base-400);
+
+  /* ====================
+    Fonts
+    ==================== */
+  --font-family-sans: Rubik, "system-ui", "-apple-system", BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace, monospace; /* 'Space Mono' */
+  --font-family-base: var(--font-family-sans);
+
+  /* ====================
+    Font sizes
+    ==================== */
+  --font-size-root: 16px;
+  --em-base: 16px;
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5625rem; /* 25px */
+  --font-size-2xl: 2rem; /* 32px */
+  --font-size-3xl: 2.25rem; /* 36px */
+  --font-size-4xl: 2.8125rem; /* 45px */
+  --font-size-5xl: 3.75rem; /* 60px */
+
+  /* ====================
+    Line height
+    ==================== */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* ====================
+    Letter spacing
+    ==================== */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* ====================
+    Border radius
+    ==================== */
+  --border-radius-sm: 0.125rem;
+  --border-radius-default: 0.25rem;
+  --border-radius-lg: 0.375rem;
+  --border-radius-xl: 0.5rem;
+  --border-radius-full: 9999px;
+
+  /* ====================
+    Spacing
+    ==================== */
+  --spacer-0: 0;
+  --spacer-0_5: 0.125rem; /* 2px */
+  --spacer-1: 0.25rem; /* 4px */
+  --spacer-1_5: 0.375rem; /* 6px */
+  --spacer-2: 0.5rem; /* 8px */
+  --spacer-2_5: 0.625rem; /* 10px */
+  --spacer-3: 0.75rem; /* 12px */
+  --spacer-3_5: 0.875rem; /* 14px */
+  --spacer-4: 1rem; /* 16px */
+  --spacer-4_5: 1.125rem; /* 18px */
+  --spacer-5: 1.25rem; /* 20px */
+  --spacer-5_5: 1.375rem; /* 22px */
+  --spacer-6: 1.5rem; /* 24px */
+  --spacer-6_5: 1.625rem; /* 26px */
+  --spacer-7: 1.75rem; /* 28px */
+  --spacer-7_5: 1.875rem; /* 30px */
+  --spacer-8: 2rem; /* 32px */
+  --spacer-8_5: 2.125rem; /* 34px */
+  --spacer-9: 2.25rem; /* 36px */
+  --spacer-9_5: 2.375rem; /* 38px */
+  --spacer-10: 2.5rem; /* 40px */
+  --spacer-11: 2.75rem; /* 44px */
+  --spacer-12: 3rem; /* 48px */
+  --spacer-14: 3.5rem; /* 56px */
+  --spacer-16: 4rem; /* 64px */
+  --spacer-18: 4.5rem; /* 72px */
+  --spacer-20: 5rem; /* 80px */
+  --spacer-22: 5.5rem; /* 88px */
+  --spacer-24: 6rem; /* 96px */
+  --spacer-32: 8rem; /* 128px */
+  --spacer-36: 9rem; /* 144px */
+  --spacer-40: 10rem; /* 160px */
+  --spacer-48: 12rem; /* 192 */
+  --spacer-56: 14rem; /* 224px */
+  --spacer-64: 16rem; /* 256px */
+  --spacer-72: 18rem; /* 288px */
+  --spacer-80: 20rem; /* 320px */
+  --spacer-90: 22.5rem; /* 360px */
+  --spacer-100: 25rem; /* 400px */
+  --spacer-110: 27.5rem; /* 440px */
+  --spacer-120: 30rem; /* 480px */
+
+  /* ====================
+  Widths
+  ==================== */
+  --screen-xs: 480px;
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+  --screen-xl: 1280px;
+  --screen-2xl: 1536px;
+
+  /* ====================
+  Transactions
+  ==================== */
+  --action-control-transaction: background-color 100ms ease;
+}
