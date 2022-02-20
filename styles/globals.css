@@ -48,6 +48,11 @@ hr {
   box-sizing: border-box;
 }
 
+ul li {
+  list-style: disc;
+}
+
+/* app container */
 .container {
   padding: 0 2rem;
 }
