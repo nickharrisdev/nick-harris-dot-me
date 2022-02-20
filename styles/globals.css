@@ -10,8 +10,29 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+}
+
+h5 {
+  font-size: var(--font-size-md);
+}
+
 a {
   color: inherit;
+  text-decoration: underline;
 }
 
 h2 a {
@@ -25,4 +46,28 @@ hr {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+/* nav */
+.nav a {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+/* footer */
+.contactIconsContainer a {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.faIcon {
+  max-width: 3em;
+  width: 100%;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
 }

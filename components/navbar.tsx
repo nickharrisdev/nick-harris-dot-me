@@ -1,12 +1,10 @@
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
 
 export default function Navbar() {
   return (
     <>
-      {/* top section */}
-      <div className={styles.titleSummaryContainer}>
-        <h1>
+      <div>
+        <h1 className="text-xl">
           Nick Harris
         </h1>
         <p>
@@ -17,13 +15,10 @@ export default function Navbar() {
         </p>
       </div>
 
-      {/* nav */}
-      <nav className={styles.nav}>
-        {/* projects */}
+      <nav className="nav">
         <Link href="/">
           <a>Projects</a>
         </Link>
-        {/* discography */}
         <Link href="/discography">
           <a>Discography</a>  
         </Link>

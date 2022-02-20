@@ -3,7 +3,6 @@ import '../styles/custom-properties.css'
 import type { AppProps } from 'next/app'
 import Layout from '../components/layout'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.89em%22 font-size=%22100%22>🧑🏻‍💻</text></svg>"
         />
       </Head>
-      <div className={styles.container}>
+      <div className="container">
       <Layout>
         <Component {...pageProps} />
       </Layout>
