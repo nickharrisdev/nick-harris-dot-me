@@ -34,10 +34,10 @@ export default function Discography(){
           Discography
         </h2>
         {/* list the releases */}
-        {data?.map((artistData) => {
+        {data?.map((artistData, index) => {
           return (
             // @ts-ignore
-            <List list={artistData.releases} artistDetails={artistData.artistDetails} type={"artist-list"}></List>
+            <List list={artistData.releases} artistDetails={artistData.artistDetails} type={"artist-list"}key={index}></List>
           )
         })}
         <Link href="/">
