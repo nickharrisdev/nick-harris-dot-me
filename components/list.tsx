@@ -4,6 +4,12 @@ const formatArtistName = (name: string) => {
   return formattedName;
 }
 
+const formatHref = (id: string, artistName: string, title: string) => {
+  const baseUrl = "https://www.discogs.com/release/"
+  const path = `${id}-${artistName?.replaceAll(" ", "-")}-${title?.replaceAll(" ", "-").replaceAll("'", "")}`
+  return `${baseUrl}${path}`
+}
+
 export default function List(props: {type?: string}) {
   if (props.type === "artist-list") {
     return (
@@ -12,10 +18,10 @@ export default function List(props: {type?: string}) {
         <h3>Credited as {formatArtistName(props.artistDetails.name)}</h3>
         <div>
         {/* @ts-ignore */}
-        {props.list?.map(({ title, artist, year }, index) => {
+        {props.list?.map(({ id, title, artist, year }, index) => {
           return (
             <p key={index}>
-              {title} by {formatArtistName(artist)} ({year})
+              <a href={formatHref(id, artist, title)} target="_blank">{title}</a> by {formatArtistName(artist)} ({year})
             </p>
           )})}
         </div>
