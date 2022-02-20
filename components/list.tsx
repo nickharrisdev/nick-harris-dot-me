@@ -21,7 +21,7 @@ export default function List(props: {type?: string}) {
         {props.list?.map(({ id, title, artist, year }, index) => {
           return (
             <p key={index}>
-              <a href={formatHref(id, artist, title)} target="_blank">{title}</a> by {formatArtistName(artist)} ({year})
+              <a href={formatHref(id, artist, title)} target="_blank" rel="noreferrer">{title}</a> by {formatArtistName(artist)} ({year})
             </p>
           )})}
         </div>
