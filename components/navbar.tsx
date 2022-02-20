@@ -27,6 +27,9 @@ export default function Navbar() {
         <Link href="/discography">
           <a>Discography</a>  
         </Link>
+        <Link href="/portfolio-resume.pdf">
+          <a target="_blank" rel="noreferrer">Resume</a>  
+        </Link>
       </nav>
     </>
   )
