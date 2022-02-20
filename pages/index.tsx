@@ -19,6 +19,10 @@ export default function Home({
       <p> 
         I’m inspired by technology that actively strives to make the world a better place. In addition, I volunteer my expertise regularly to help non profit organizations with missions that move me.
       </p>
+      <br />
+      <p> 
+        When not making cool things on the internet, I can usually be found playing music with <a href="https://moonerband.com/" target="_blank" rel="noopener noreferrer"> Mooner</a>, <a href="https://youngmaninahurry.com" target="_blank" rel="noopener noreferrer">Young Man in a Hurry</a>, or attending a local show. 
+      </p>
       </div>
       {/* projects list */}
       {/* <h2 id="projects">
