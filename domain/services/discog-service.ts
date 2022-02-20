@@ -14,15 +14,20 @@ export class DiscogService {
     // use promise.all to do mapping and get all the data I need. 
     // then return it in the format I need
     // only have to call useSWR one time in the page. 
-    const getArtistReleaseData = (artistId: string) => {
+    // const getArtistReleaseData = (artistId: string) => {
 
-    }
-
-    // ["6067515", "10538149"]
+    // }
     const artistReleaseData = await Promise.all(Object.values(ArtistIds).map(async (artistId) => {
-      const releases = await httpClient.get(`${url}/artists/${artistId}/releases`);
-      const artistDetails = await httpClient.get(`${url}/artists/${artistId}`)
-
+      const releases = await httpClient.get(`${url}artists/${artistId}/releases`);
+      const artistDetails = await httpClient.get(`${url}artists/${artistId}`)
+      // // @ts-ignore
+      // console.log(releases)
+      // // @ts-ignore
+      // const releaseDetails = Promise.all(releases.releases.map(async (release) => {
+      //   const details = await httpClient.get(release.resource_url);
+      //   return details
+      // }))
+      // console.log(releaseDetails, "release deets")
       // @ts-ignore
       return { artistDetails, releases: releases.releases }
     }))
