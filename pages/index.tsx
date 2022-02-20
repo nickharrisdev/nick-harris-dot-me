@@ -1,16 +1,12 @@
 import type { GetStaticProps } from 'next'
-import styles from '../styles/Home.module.css'
 import { getSortedProjectsData } from '../lib/projects'
-import { AllProjectsData } from '../domain/props.interface'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faMastodon } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { Projects } from '../domain/types/projects.interface'
 
 
 export default function Home({
   allProjectsData
 }: {
-  allProjectsData: AllProjectsData[]
+  allProjectsData: Projects[]
 }){
   return (
     <>

@@ -1,5 +1,5 @@
 import { HttpClient } from "../../data-access/http-client";
-import { ArtistIds } from "../artistIds-enum";
+import { ArtistIds } from "../types/artistIds.enum";
 
 const httpClient = new HttpClient();
 
