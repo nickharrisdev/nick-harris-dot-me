@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const formatArtistName = (name: string) => {
   const regex = /[0-9]/g;
   const formattedName = name.replaceAll(regex, "").replaceAll("(", "").replaceAll(")", "");
@@ -24,7 +26,7 @@ export default function List(props: {type?: string}) {
           return (
               <div className="flex flex-col" key={index}>
                 <a href={formatHref(id, artist, title)} target="_blank" rel="noreferrer">
-                  <img src={thumb} alt="Album cover thumbnail" className="shadow-md"/>
+                  <Image src={thumb} alt="Album cover thumbnail" className="shadow-md" width="200" height="200"/>
                   <p>{title}</p>
                 </a>
                 <p>{formatArtistName(artist)}</p> 
