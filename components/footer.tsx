@@ -9,16 +9,16 @@ export default function Footer() {
       <div id="contact" className="contactIconsContainer">
         <h2>Get in touch</h2>
         <div className="iconsContainer">
-          <a href="https://www.linkedin.com/in/nick-harris-web-dev/" rel="noreferrer" aria-label="Linked In" className="no-underline" target="_blank">
+          <a href="https://www.linkedin.com/in/nick-harris-web-dev/" rel="noreferrer" aria-label="Linked In" className="no-underline" target="_blank" title="Linked In">
             <FontAwesomeIcon icon={faLinkedin} className="faIcon"/>
           </a>
-          <a href="https://www.github.com/nickharrisdev" className="no-underline" target="_blank" rel="noreferrer" aria-label="Github">
+          <a href="https://www.github.com/nickharrisdev" className="no-underline" target="_blank" rel="noreferrer" aria-label="Github" title="Github">
             <FontAwesomeIcon icon={faGithub} className="faIcon"/>
           </a>
-          <a href="https://fosstodon.org/@nickharris" className="no-underline" target="_blank" rel="noreferrer" aria-label="Mastadon">
+          <a href="https://fosstodon.org/@nickharris" className="no-underline" target="_blank" rel="noreferrer" aria-label="Mastadon" title="Fosstadon">
             <FontAwesomeIcon icon={faMastodon} className="faIcon"/>
           </a>
-          <a href="mailto:nick@nickharris.me" className="no-underline" target="_blank" rel="noreferrer" aria-label="Email">
+          <a href="mailto:nick@nickharris.me" className="no-underline" target="_blank" rel="noreferrer" aria-label="Email" title="Email">
             <FontAwesomeIcon icon={faEnvelope} className="faIcon"/>
           </a>
         </div>
