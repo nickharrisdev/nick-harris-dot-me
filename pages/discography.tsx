@@ -21,7 +21,7 @@ export default function Discography(){
         {data?.map((artistData, index) => {
           return (
             // @ts-ignore
-            <List list={artistData.releases} artistDetails={artistData.artistDetails} type={"artist-list"}key={index}></List>
+            <List list={artistData.releases} artistDetails={artistData.artistDetails} type={"artist-list"} key={index}></List>
           )
         })}
         <Link href="/">
