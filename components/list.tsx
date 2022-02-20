@@ -20,15 +20,13 @@ export default function List(props: {type?: string}) {
         {/* @ts-ignore */}
         {props.list?.map(({ id, title, artist, year, thumb }, index) => {
           return (
-              <div className="flex flex-col">
-                <div key={index}>
-                  <a href={formatHref(id, artist, title)} target="_blank" rel="noreferrer">
-                    <img src={thumb} alt="Album cover thumbnail" className="shadow-md"/>
-                    <p>{title}</p>
-                  </a>
-                  <p>{formatArtistName(artist)}</p> 
-                  <p>({year})</p>
-                </div>
+              <div className="flex flex-col" key={index}>
+                <a href={formatHref(id, artist, title)} target="_blank" rel="noreferrer">
+                  <img src={thumb} alt="Album cover thumbnail" className="shadow-md"/>
+                  <p>{title}</p>
+                </a>
+                <p>{formatArtistName(artist)}</p> 
+                <p>({year})</p>
               </div>
           )})}
         </div>
