@@ -10,9 +10,19 @@ export default function Home({
 }){
   return (
     <>
+      <img src="/me.jpeg" alt="A picture of Nick Harris in a red hat." width="200" height="200" className="shadow-md rounded my-2"/>
+      <div className="max-w-lg">
+      <p>
+        I’m a self-taught software engineer with a diverse professional background. Specializing on the front end, I create UIs that are beautiful, accessible, intuitive, and performant for users, while also reusable, extensible, and maintainable for other developers. 
+      </p>
+      <br />
+      <p> 
+        I’m inspired by technology that actively strives to make the world a better place. In addition, I volunteer my expertise regularly to help non profit organizations with missions that move me.
+      </p>
+      </div>
       {/* projects list */}
-      <h2 id="projects">
-        Projects
+      {/* <h2 id="projects">
+        Recent projects
       </h2>
       <ul>
         {allProjectsData.map(({ id, date, title }) => (
@@ -24,7 +34,7 @@ export default function Home({
             {date}
           </li>
         ))}
-      </ul>
+      </ul> */}
     </>
   )
 }
