@@ -17,7 +17,7 @@ export default function Discography(){
         <h2>
           Discography
         </h2>
-        <p>I love making records! I have cataloged all of the released albums that I've been a part of on Discogs.com, and use their public api to populate the list below. </p>
+        <p>I love making records! I have cataloged all of the released albums that I have been a part of on Discogs.com, and use their public api to populate the list below. </p>
         {/* list the releases */}
         {data?.map((artistData, index) => {
           return (
