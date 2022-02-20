@@ -1,6 +1,7 @@
 import useSWR from 'swr'
 import Link from 'next/link'
-import { HttpClient } from '../data-access/http-client'
+import { DiscogService } from '../domain/services/discog-service';
+import List from '../components/list';
 
 export default function Discography(){
   // need to use this combination of urls to get all the data needed from discogs.
@@ -12,53 +13,45 @@ export default function Discography(){
   // https://api.discogs.com/artists/6067515
   // https://api.discogs.com/artists/6067515/releases
 
-  const httpClient = new HttpClient();
+  const discogService = new DiscogService();
 
-  const getArtistReleaseData = (id: string) => {
-    const { data, error } = useSWR(
-      `https://api.discogs.com/artists/${id}/releases`,
-      httpClient.get
-    );
-    return data;
-  }
+  const baseUrl = "https://api.discogs.com/";
 
-  const nhReleaseData = getArtistReleaseData("6067515");
-  const rmReleaseData = getArtistReleaseData("10538149");
-  // console.log(nhReleaseData)
+  const {data, error} = useSWR(baseUrl, discogService.getDiscogData);
 
-  return (
-    <>
+  // TODO:
+  // Loop over each artist,
+  // within the loop, pass the releases to a new LinkList component
+  // The List component will loop over the releases data
+  // utilize loading and error states from useSWR
+  // see here: https://swr.vercel.app/
+  // use id to get artist info -- name, etc. "Credited as Nick Harris, Credited as Ricky Mirage". 
+
+  if (data) {
+    return (
+      <>
         <h2>
           Discography
         </h2>
-
         {/* list the releases */}
-        <div>
-          {/* @ts-ignore */}
-          {nhReleaseData?.releases.map(({ title, artist, year }, index) => {
-            const regex = /[0-9]/g;
-            artist = artist.replaceAll(regex, "").replaceAll("(", "").replaceAll(")", "");
-            return (
-              <p key={index}>
-                {title} by {artist} ({year})
-              </p>
-            )})}
-        </div>
-        <h3>As Ricky Mirage:</h3>
-        <div>
-          {/* @ts-ignore */}
-          {rmReleaseData?.releases.map(({ title, artist, year }, index) => {
-            const regex = /[0-9]/g;
-            artist = artist.replaceAll(regex, "").replaceAll("(", "").replaceAll(")", "");
-            return (
-              <p key={index}>
-                {title} by {artist} ({year})
-              </p>
-            )})}
-        </div>
+        {data?.map((artistData) => {
+          return (
+            // @ts-ignore
+            <List list={artistData.releases} artistDetails={artistData.artistDetails} type={"artist-list"}></List>
+          )
+        })}
         <Link href="/">
           <a>Go back</a>
         </Link>
-    </>
-  )
+      </>
+    )
+  } else if (error) {
+    return (
+      <div>There has been an error.</div>
+    )
+  } else {
+    return (
+      <div>Loading...</div>
+    )
+  }
 }
