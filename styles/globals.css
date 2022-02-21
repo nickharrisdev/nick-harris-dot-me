@@ -63,18 +63,3 @@ ul li {
 .nav a {
   margin: 0.5rem 0.5rem 0.5rem 0;
 }
-
-/* footer */
-.contactIconsContainer a {
-  margin: 0.5rem 0.5rem 0.5rem 0;
-}
-
-.faIcon {
-  max-width: 2.5em;
-  width: 100%;
-}
-
-.iconsContainer {
-  display: flex;
-  align-items: center;
-}

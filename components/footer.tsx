@@ -1,27 +1,31 @@
-import { faGithub, faLinkedin, faMastodon } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <>
       {/* links */}
-      <div id="contact" className="contactIconsContainer">
-        <h2>Get in touch</h2>
-        <div className="iconsContainer">
-          <a href="https://www.linkedin.com/in/nick-harris-web-dev/" rel="noreferrer" aria-label="Linked In" className="no-underline" target="_blank" title="Linked In">
-            <FontAwesomeIcon icon={faLinkedin} className="faIcon"/>
+      <hr className="mt-3" />
+      <div id="contact" className="mt-1">
+        {/* <h5>Contact</h5> */}
+        <div className="text-xs">
+          Reach me: 
+          <a href="mailto:nick@nickharris.me" target="_blank" rel="noreferrer" aria-label="Email" title="Email" className="mx-1">
+            Email
           </a>
-          <a href="https://www.github.com/nickharrisdev" className="no-underline" target="_blank" rel="noreferrer" aria-label="Github" title="Github">
-            <FontAwesomeIcon icon={faGithub} className="faIcon"/>
+          <a href="https://www.linkedin.com/in/nick-harris-web-dev/" rel="noreferrer" aria-label="Linked In" target="_blank" title="Linked In" className="mr-1">
+            LinkedIn
           </a>
-          <a href="https://fosstodon.org/@nickharris" className="no-underline" target="_blank" rel="noreferrer" aria-label="Mastadon" title="Fosstadon">
-            <FontAwesomeIcon icon={faMastodon} className="faIcon"/>
+          <a href="https://www.github.com/nickharrisdev" target="_blank" rel="noreferrer" aria-label="Github" title="Github" className="mr-1">
+            Github
           </a>
-          <a href="mailto:nick@nickharris.me" className="no-underline" target="_blank" rel="noreferrer" aria-label="Email" title="Email">
-            <FontAwesomeIcon icon={faEnvelope} className="faIcon"/>
+          <a href="https://fosstodon.org/@nickharris" target="_blank" rel="noreferrer" aria-label="Mastadon" title="Fosstadon" className="mr-1">
+            Fosstodon
           </a>
         </div>
+        <Link href="/colophon">
+          <a className="text-xs">Colophon</a>
+        </Link>
+        <p className="text-xs mb-5">Copyright © {new Date().getFullYear()} Nick Harris</p>
       </div>  
     </>
   )
