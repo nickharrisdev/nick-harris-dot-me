@@ -10,7 +10,8 @@ export default function WeeklyJams({
 }) {
   return (
     <>
-      <h2 className="my-3">Weekly Jams</h2>
+      <h2>Weekly Jams</h2>
+      <p>I post my favorite song(s) of the week here + one or two other notes.</p>
       <div className="my-3">
         {allJamsData?.map(({ id, date, title }) => (
           <div key={id}>
