@@ -1,6 +1,7 @@
 import { faGithub, faLinkedin, faMastodon } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -22,6 +23,9 @@ export default function Footer() {
             <FontAwesomeIcon icon={faEnvelope} className="faIcon"/>
           </a>
         </div>
+        <Link href="/colophon">
+          <a>Colophon</a>
+        </Link>
       </div>  
     </>
   )
