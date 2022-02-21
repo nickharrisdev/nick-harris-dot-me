@@ -20,8 +20,6 @@ export async function getStaticProps({ params }) {
 
 // @ts-ignore
 export default function Jam({jamData, htmlContent}) {
-
-  console.log(jamData, htmlContent, "in component")
   return (
     <>
       <div>testing</div>
