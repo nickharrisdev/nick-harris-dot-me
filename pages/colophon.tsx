@@ -6,6 +6,7 @@ export default function Colophon() {
     {type: "Generator", name: "Next.js"},
     {type: "Host", name: "Netlify"},
     {type: "Code editor", name: "VSCode"},
+    {type: "Git host", name: "Github"},
     {type: "Typeface", name: "Roboto"},
     {type: "Registrar", name: "Google Domains"},
     // {type: "", name: ""},
