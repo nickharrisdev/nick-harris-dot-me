@@ -30,7 +30,7 @@ export default function Jam({jamData, htmlContent}) {
       <div className="mb-3 max-w-lg" dangerouslySetInnerHTML={{ __html: htmlContent }} />
       <iframe width="560" height="315" src={jamData.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       <div className="my-3">
-        <h4>Context for this week's jam</h4>
+        <h4>Context for this week&apos;s jam</h4>
         <p>Chicago weather: {jamData.weather}</p>
         <p>Top news: {jamData.headline}</p>
       </div>
