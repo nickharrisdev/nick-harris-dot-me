@@ -10,7 +10,7 @@ export default function WeeklyJams({
   console.log(allJamsData, "allJams Data")
   return (
     <>
-      <h2>Weekly Jams</h2>
+      <h2 className="my-3">Weekly Jams</h2>
       <ul>
         {allJamsData?.map(({ id, date, title }) => (
           <li key={id}>

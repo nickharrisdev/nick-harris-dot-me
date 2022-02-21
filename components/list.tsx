@@ -18,7 +18,7 @@ export default function List(props: {type?: string}) {
         <h4 className="mt-1">Credited as {formatArtistName(props.artistDetails.name)}</h4>
         {/* @ts-ignore */}
         <p className="mb-1">{props.list.length} results</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-3">
         {/* @ts-ignore */}
         {props.list?.map(({ id, title, artist, year, thumb }, index) => {
           return (
