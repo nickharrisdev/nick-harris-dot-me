@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next"
+import Link from "next/link"
 import { getSortedJamsData } from "../lib/jams"
 
 export default function WeeklyJams({
@@ -13,7 +14,9 @@ export default function WeeklyJams({
       <ul>
         {allJamsData?.map(({ id, date, title }) => (
           <li key={id}>
-            {title}
+            <Link href={`jams/${id}`}>
+              <a>{title}</a>
+            </Link>
             <br />
             {id}
             <br />
