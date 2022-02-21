@@ -28,7 +28,7 @@ export default function Discography(){
           )
         })}
         <Link href="/">
-          <a>Go back</a>
+          <a>Go to homepage</a>
         </Link>
       </>
     )
