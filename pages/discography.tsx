@@ -18,7 +18,7 @@ export default function Discography(){
           Discography
         </h2>
         <p className="max-w-lg">
-          I love making records! And I have had the privilege to contribute to many and produce some of my own over the years. I catalogued all of the released albums that I have been a part of on Discogs.com, and use its public api to populate the list below. 
+          I have had the privilege to contribute to many recordings and produced some of my own over the years. I catalogued all of the released albums that I have been a part of on Discogs.com, and use its public api to populate the list below. 
         </p>
         {/* list the releases */}
         {data?.map((artistData, index) => {
