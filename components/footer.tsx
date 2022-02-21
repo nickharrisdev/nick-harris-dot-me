@@ -3,10 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      {/* links */}
-      <hr className="mt-3" />
-      <div id="contact" className="mt-1">
-        {/* <h5>Contact</h5> */}
+      <div className="mt-4">
         <div className="text-xs">
           Reach me: 
           <a href="mailto:nick@nickharris.me" target="_blank" rel="noreferrer" aria-label="Email" title="Email" className="mx-1">
@@ -22,10 +19,11 @@ export default function Footer() {
             Fosstodon
           </a>
         </div>
-        <Link href="/colophon">
-          <a className="text-xs">Colophon</a>
-        </Link>
-        <p className="text-xs mb-5">Copyright © {new Date().getFullYear()} Nick Harris</p>
+        <p className="text-xs mb-5">Copyright © {new Date().getFullYear()} Nick Harris 
+          <Link href="/colophon">
+            <a className="text-xs ml-1">Colophon</a>
+          </Link>
+        </p>
       </div>  
     </>
   )
