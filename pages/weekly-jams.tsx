@@ -1,3 +1,4 @@
+import format from "date-fns/format";
 import { GetStaticProps } from "next"
 import Link from "next/link"
 import { getSortedJamsData } from "../lib/jams"
@@ -10,14 +11,14 @@ export default function WeeklyJams({
   return (
     <>
       <h2 className="my-3">Weekly Jams</h2>
-      <div>
+      <div className="my-3">
         {allJamsData?.map(({ id, date, title }) => (
           <div key={id}>
             <Link href={`jams/${id}`}>
               <a>{title}</a>
             </Link>
             <br />
-            {date}
+            {format(new Date(date), "MMM d, yyyy")}
           </div>
           ))}
       </div> 

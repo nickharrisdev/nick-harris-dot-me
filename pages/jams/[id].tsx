@@ -1,3 +1,4 @@
+import format from 'date-fns/format';
 import { getAllJamIds, getJamData } from '../../lib/jams'
 import markdownToHtml from '../../lib/markdownToHtml'
 
@@ -22,9 +23,12 @@ export async function getStaticProps({ params }) {
 export default function Jam({jamData, htmlContent}) {
   return (
     <>
-      <div>testing</div>
-      <div>{jamData.title}</div>
+      <div className="my-3">
+        <h4 >{jamData.title}</h4>
+        <p>{format(new Date(jamData.date), "MMM d, yyyy")}</p>
+      </div>
       <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      <iframe width="560" height="315" src={jamData.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     </>
   )
 }
