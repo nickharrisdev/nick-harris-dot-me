@@ -17,7 +17,6 @@ export function getSortedJamsData() {
 
     // Use gray-matter to parse the jam metadata section
     const matterResult = matter(fileContents)
-
     // Combine the data with the id
     return {
       id,
@@ -62,7 +61,7 @@ export function getAllJamIds() {
   })
 }
 
-export function getJamData(id) {
+export function getJamData(id: string) {
   const fullPath = path.join(jamsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -72,6 +71,7 @@ export function getJamData(id) {
   // Combine the data with the id
   return {
     id,
-    ...matterResult.data
+    ...matterResult.data,
+    contentMd: matterResult.content
   }
 }

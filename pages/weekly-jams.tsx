@@ -7,23 +7,20 @@ export default function WeeklyJams({
 }: {
   allJamsData: any[]
 }) {
-  console.log(allJamsData, "allJams Data")
   return (
     <>
       <h2 className="my-3">Weekly Jams</h2>
-      <ul>
+      <div>
         {allJamsData?.map(({ id, date, title }) => (
-          <li key={id}>
+          <div key={id}>
             <Link href={`jams/${id}`}>
               <a>{title}</a>
             </Link>
             <br />
-            {id}
-            <br />
             {date}
-            </li>
+          </div>
           ))}
-      </ul> 
+      </div> 
     </>
   )
 }
