@@ -25,10 +25,10 @@ export default function List(props: {type?: string}) {
               <div className="flex flex-col" key={index}>
                 <a href={formatHref(id, artist, title)} target="_blank" rel="noreferrer">
                   <img src={thumb} alt="Album cover thumbnail" loading="lazy" className="shadow-md" width="170" height="auto" />
-                  <p>{title}</p>
+                  <p className="mb-0">{title}</p>
                 </a>
-                <p>{formatArtistName(artist)}</p> 
-                <p>({year})</p>
+                <p className="mb-0">{formatArtistName(artist)}</p> 
+                <p className="mb-0">({year})</p>
               </div>
           )})}
         </div>
