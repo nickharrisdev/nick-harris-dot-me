@@ -10,19 +10,17 @@ export default function Home({
 }){
   return (
     <>
-      <img src="/me.jpeg" alt="A picture of Nick Harris in a red hat." width="200" height="200" className="shadow-md rounded my-2"/>
+      <img src="/me.jpeg" alt="A picture of Nick Harris in a red hat." width="200" height="200" className="shadow-md rounded my-4"/>
       <div className="max-w-lg">
-      <p>
-        I’m a self-taught software engineer with a diverse professional background. Specializing on the front end, I create UIs that are beautiful, accessible, intuitive, and performant for users, while also reusable, extensible, and maintainable for other developers. 
-      </p>
-      <br />
-      <p> 
-        I’m inspired by technology that actively strives to make the world a better place. In addition, I volunteer my expertise regularly to help non profit organizations with missions that move me.
-      </p>
-      <br />
-      <p> 
-        When not making cool things on the internet, I can usually be found playing music with <a href="https://moonerband.com/" target="_blank" rel="noopener noreferrer"> Mooner</a>, <a href="https://youngmaninahurry.com" target="_blank" rel="noopener noreferrer">Young Man in a Hurry</a>, or attending a local show. 
-      </p>
+        <p className="mb-4">
+          I’m a self-taught software engineer with a diverse professional background. Specializing on the front end, I create UIs that are beautiful, accessible, intuitive, and performant for users, while also reusable, extensible, and maintainable for other developers. 
+        </p>
+        <p className="mb-4"> 
+          I’m inspired by technology that actively strives to make the world a better place. In addition, I volunteer my expertise regularly to help non profit organizations with missions that move me.
+        </p>
+        <p className="mb-4"> 
+          When not making cool things on the internet, I can usually be found playing music with <a href="https://moonerband.com/" target="_blank" rel="noopener noreferrer"> Mooner</a>, <a href="https://youngmaninahurry.com" target="_blank" rel="noopener noreferrer">Young Man in a Hurry</a>, or attending a local show. 
+        </p>
       </div>
       {/* projects list */}
       {/* <h2 id="projects">
