@@ -39,6 +39,11 @@ h2 a {
   cursor: pointer;
 }
 
+p {
+  max-width: 32rem;
+  margin-bottom: var(--spacer-3);
+}
+
 hr {
   width: 100%;
 }

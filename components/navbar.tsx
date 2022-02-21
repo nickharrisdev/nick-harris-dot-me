@@ -7,10 +7,10 @@ export default function Navbar() {
         <h1 className="text-xl">
           Nick Harris
         </h1>
-        <p>
+        <p className="mb-0">
           Software developer | Musician
         </p>
-        <p>
+        <p className="mb-0">
           Chicago, Illinois
         </p>
       </div>
