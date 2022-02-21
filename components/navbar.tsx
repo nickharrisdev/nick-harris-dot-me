@@ -8,7 +8,7 @@ export default function Navbar() {
           Nick Harris
         </h1>
         <p>
-          Web developer | Musician
+          Software developer | Musician
         </p>
         <p>
           Chicago, Illinois
