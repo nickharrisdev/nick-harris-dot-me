@@ -27,7 +27,7 @@ export default function Jam({jamData, htmlContent}) {
         <h4 >{jamData.title}</h4>
         <p>{format(new Date(jamData.date), "MMM d, yyyy")}</p>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      <div className="mb-3 max-w-lg" dangerouslySetInnerHTML={{ __html: htmlContent }} />
       <iframe width="560" height="315" src={jamData.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       <div className="my-3">
         <h4>Context for this week's jam</h4>
