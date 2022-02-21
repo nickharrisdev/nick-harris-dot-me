@@ -17,7 +17,7 @@ export default function Discography(){
         <h2 className="my-3">
           Discography
         </h2>
-        <p className="mb-3">
+        <p>
           I&apos;ve had the privilege to contribute to many recordings and produced some of my own over the years. I catalogued all of the released albums that I have been a part of on Discogs.com, and use its public api to populate the list below. 
         </p>
         {/* list the releases */}
