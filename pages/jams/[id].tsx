@@ -28,11 +28,15 @@ export default function Jam({jamData, htmlContent}) {
         <p>{format(new Date(jamData.date), "MMM d, yyyy")}</p>
       </div>
       <div className="mb-3" dangerouslySetInnerHTML={{ __html: htmlContent }} />
-      <iframe width="560" height="315" src={jamData.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <div className="max-w-md">
+      <div className="video-container">
+        <iframe className="responsive-iframe" src={jamData.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
+      </div>
       <div className="my-3">
         <h4>Context for this week&apos;s jam</h4>
-        <p>Chicago weather: {jamData.weather}</p>
-        <p>Top news: {jamData.headline}</p>
+        <p className="mb-0"><span className="font-bold">Chicago weather:</span> {jamData.weather}</p>
+        <p className="mb-0"><span className="font-bold">Top news:</span> {jamData.headline}</p>
       </div>
     </>
   )
