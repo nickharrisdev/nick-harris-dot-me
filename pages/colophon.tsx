@@ -22,13 +22,13 @@ export default function Colophon() {
      {toolsList.map((tool, index) => {
        return (
           <div className="flex max-w-xs justify-between" style={styles} key={index}>
-            <p>{tool.type}</p>
-            <p>{tool.name}</p>
+            <p className="mb-0 font-bold">{tool.type}</p>
+            <p className="mb-0">{tool.name}</p>
           </div>
        )
      })}
-        <p className="mt-3">
-          Thank you!
+        <p className="mt-3 mb-0">
+          Thanks for stopping by.
         </p>
         <p>
           Nick
