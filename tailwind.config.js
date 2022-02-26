@@ -151,6 +151,7 @@ module.exports = {
       mono: "var(--font-family-mono)",
     },
     fontSize: {
+      "2xs": ["var(--font-size-2xs)", "var(--line-height-relaxed)"],
       xs: ["var(--font-size-xs)", "var(--line-height-relaxed)"],
       sm: ["var(--font-size-sm)", "var(--line-height-normal)"],
       base: ["var(--font-size-base)", "var(--line-height-normal)"],
