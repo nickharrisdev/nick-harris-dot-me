@@ -1,3 +1,7 @@
+import format from "date-fns/format";
+import { Release } from "../domain/types/release.interface";
+import { Show } from "../domain/types/show.interface";
+
 const formatArtistName = (name: string) => {
   const regex = /[0-9]/g;
   const formattedName = name.replaceAll(regex, "").replaceAll("(", "").replaceAll(")", "");
@@ -10,14 +14,13 @@ const formatHref = (id: string, artistName: string, title: string) => {
   return `${baseUrl}${path}`
 }
 
-export default function List(props: {type?: string}) {
+export default function List(props: {list?: Show[] | Release[], type?: string, artistDetails?: {name: string}}) {
   if (props.type === "artist-list") {
     return (
       <>
         {/* @ts-ignore */}
         <h4 className="mt-1">Credited as {formatArtistName(props.artistDetails.name)}</h4>
-        {/* @ts-ignore */}
-        <p className="mb-1">{props.list.length} results</p>
+        <p className="mb-1">{props.list?.length} results</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-3">
         {/* @ts-ignore */}
         {props.list?.map(({ id, title, artist, year, thumb }, index) => {
@@ -34,6 +37,23 @@ export default function List(props: {type?: string}) {
         </div>
       </>
    )
+  } else if (props.type === "shows-list") {
+
+    // TODO: sort by date utility function --> fly it in here. 
+
+    return (
+      <>
+        {/* @ts-ignore */}
+        {props.list?.map(({venue, group, date, link}, index) => {
+          return (
+            <a href={link} target="_blank" rel="noopener noreferrer" key={index}>
+              <p className="mb-0">{format(date, "MMM d, yyyy")}</p>
+              <p><strong>{venue}</strong> with {group}</p>
+            </a>
+          )
+        })}
+      </>
+    )
   } else {
     return (
       <div>No data</div>
