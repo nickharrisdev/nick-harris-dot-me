@@ -56,6 +56,11 @@ ul li {
   list-style: disc;
 }
 
+.dark {
+  color: white;
+  background-color: black;
+}
+
 /* app container */
 .container {
   padding: 1rem 2rem;
@@ -89,22 +94,6 @@ ul li {
 }
 
 /* dropdown */
-.dropbtn {
-  text-decoration: underline;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  background-color: white;
-}
-
-.dropbtn-container {
-  background-color: white;
-}
-
-.dropbtn-container:hover,
-.dropbtn-container:focus {
-  background-color: white;
-}
 
 .dropdown {
   position: relative;
@@ -121,7 +110,6 @@ ul li {
 }
 
 .dropdown-content a {
-  color: black;
   text-decoration: underline;
   display: block;
 }
@@ -132,6 +120,15 @@ ul li {
 
 .show {
   display: block;
+}
+
+.dropdown-content.dark-mode {
+  background-color: black !important;
+}
+
+.dropdown-content.dark-mode a:hover {
+  background-color: white !important;
+  color: black !important;
 }
 
 /* custom utils */

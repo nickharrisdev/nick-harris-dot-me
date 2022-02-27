@@ -1,5 +1,6 @@
 import Footer from './footer'
 import Navbar from './navbar'
+import ThemeToggle from './theme-toggle'
 
 // @ts-ignore
 export default function Layout({ children }) {
@@ -20,13 +21,7 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <div className="flex justify-between items-center max-w-lg w-full">
         <Footer />
-        <div className="toggle-container flex flex-col items-center">
-          <p className="text-xs mb-0">Dark mode</p>
-          <label className="switch" htmlFor="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div className="slider round"></div>
-          </label>
-        </div>
+        <ThemeToggle />
       </div>
     </>
   )

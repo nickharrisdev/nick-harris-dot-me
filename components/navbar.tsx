@@ -32,7 +32,7 @@ export default function Navbar() {
         
         <div className="dropdown">
           <span className="dropbtn-container mr-1">
-            <button onClick={toggleDropdown} className="dropbtn" aria-label="Toggle dropdown">Music</button>
+            <button onClick={toggleDropdown} className="dropbtn underline" aria-label="Toggle dropdown">Music</button>
             <span className="text-2xs mr-1"> &#9660; </span>
           </span>
           <div id="myDropdown" className="dropdown-content shadow-md">
