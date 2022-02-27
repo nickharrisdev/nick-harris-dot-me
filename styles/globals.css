@@ -56,6 +56,11 @@ ul li {
   list-style: disc;
 }
 
+.dark {
+  color: white;
+  background-color: black;
+}
+
 /* app container */
 .container {
   padding: 1rem 2rem;
@@ -89,22 +94,6 @@ ul li {
 }
 
 /* dropdown */
-.dropbtn {
-  text-decoration: underline;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  background-color: white;
-}
-
-.dropbtn-container {
-  background-color: white;
-}
-
-.dropbtn-container:hover,
-.dropbtn-container:focus {
-  background-color: white;
-}
 
 .dropdown {
   position: relative;
@@ -121,7 +110,6 @@ ul li {
 }
 
 .dropdown-content a {
-  color: black;
   text-decoration: underline;
   display: block;
 }
@@ -134,8 +122,68 @@ ul li {
   display: block;
 }
 
+.dropdown-content.dark-mode {
+  background-color: black !important;
+}
+
+.dropdown-content.dark-mode a:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
 /* custom utils */
 
 .max-w-fit {
   max-width: fit-content;
+}
+
+/* dark toggle */
+
+.switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 50px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 16px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 16px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
