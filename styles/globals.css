@@ -133,3 +133,9 @@ ul li {
 .show {
   display: block;
 }
+
+/* custom utils */
+
+.max-w-fit {
+  max-width: fit-content;
+}
