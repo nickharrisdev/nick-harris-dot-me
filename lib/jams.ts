@@ -23,17 +23,12 @@ export function getSortedJamsData() {
       ...matterResult.data
     }
   })
-  // Sort jams by date
-  // @ts-ignore
-  return allJamsData.sort(({ date: a }, { date: b }) => {
-    if (a < b) {
-      return 1
-    } else if (a > b) {
-      return -1
-    } else {
-      return 0
-    }
+
+  allJamsData.sort(function (a, b) {
+    // @ts-ignore
+    return a.date - b.date;
   })
+  return allJamsData;
 }
 
 export function getAllJamIds() {

@@ -15,7 +15,7 @@ export default function WeeklyJams({
       <div className="my-3">
         {allJamsData?.map(({ id, date, title }) => (
           <div key={id}>
-            <Link href={`jams/${id}`}>
+            <Link href={`/jams/${id}`}>
               <a>{title}</a>
             </Link>
             <br />
