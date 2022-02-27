@@ -15,10 +15,11 @@ export default function WeeklyJams({
       <div className="my-3">
         {allJamsData?.map(({ id, date, title }) => (
           <div className="flex" key={id}>
-            <p className="mb-0">{format(new Date(date), "MMM d, yyyy")}&nbsp;-&nbsp;</p>
+            <p className="mb-0">{format(new Date(date), "MMM d, yyyy")}&nbsp;-&nbsp;
             <Link href={`/jams/${id}`}>
               <a>{title}</a>
             </Link>
+            </p>
           </div>
           ))}
       </div> 

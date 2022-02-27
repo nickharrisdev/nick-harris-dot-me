@@ -46,8 +46,7 @@ export default function List(props: {list?: Show[] | Release[], type?: string, a
         {sortedUpcomingShows?.map(({venue, group, date, link}, index) => {
           return (
             <a href={link} target="_blank" rel="noopener noreferrer" className={`flex max-w-fit ${link ? "" : "no-underline"}`} key={index}>
-              <p className="mb-0">{`${format(date, "MMM dd, yyyy")}`}&nbsp;-&nbsp;</p>
-              <p className="mb-0"><strong>{venue}</strong> with {group}</p>
+              <p className="mb-0">{`${format(date, "MMM dd, yyyy")}`}&nbsp;-&nbsp;<strong>{venue}</strong> with {group}</p>
             </a>
           )
         })}
@@ -56,8 +55,7 @@ export default function List(props: {list?: Show[] | Release[], type?: string, a
         {sortedPastShows?.map(({venue, group, date, link}, index) => {
           return (
             <a href={link} target="_blank" rel="noopener noreferrer" className={`flex max-w-fit ${link ? "" : "no-underline"}`} key={index}>
-              <p className="mb-0">{`${format(date, "MMM dd, yyyy")}`}&nbsp;-&nbsp;</p>
-              <p className="mb-0"><strong>{venue}</strong> with {group}</p>
+              <p className="mb-0">{`${format(date, "MMM dd, yyyy")}`}&nbsp;-&nbsp;<strong>{venue}</strong> with {group}</p>
             </a>
           )
         })}
