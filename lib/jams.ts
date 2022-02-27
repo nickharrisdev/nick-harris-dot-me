@@ -17,6 +17,7 @@ export function getSortedJamsData() {
 
     // Use gray-matter to parse the jam metadata section
     const matterResult = matter(fileContents)
+    matterResult.data.date = `${new Date(matterResult.data.date)}`
     // Combine the data with the id
     return {
       id,

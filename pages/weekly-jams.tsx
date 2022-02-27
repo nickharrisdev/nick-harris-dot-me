@@ -14,12 +14,11 @@ export default function WeeklyJams({
       <p>I post my favorite song(s) of the week here + one or two other notes.</p>
       <div className="my-3">
         {allJamsData?.map(({ id, date, title }) => (
-          <div key={id}>
+          <div className="flex" key={id}>
+            <p className="mb-0">{format(new Date(date), "MMM d, yyyy")}&nbsp;-&nbsp;</p>
             <Link href={`/jams/${id}`}>
               <a>{title}</a>
             </Link>
-            <br />
-            {format(new Date(date), "MMM d, yyyy")}
           </div>
           ))}
       </div> 
