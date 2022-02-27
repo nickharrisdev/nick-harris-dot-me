@@ -14,6 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.89em%22 font-size=%22100%22>🧑🏻‍💻</text></svg>"
         />
+            {/* @ts-ignore */}
+        <link rel="stylesheet" href="https://unpkg.com/speedlify-score@1.0.2/speedlify-score.css" media="print" onLoad="this.media='all'" />
+        <script src="https://unpkg.com/speedlify-score@1.0.2/speedlify-score.js" async defer></script>
       </Head>
       <div className="container">
       <Layout>
