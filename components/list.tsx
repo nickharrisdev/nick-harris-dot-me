@@ -8,18 +8,19 @@ const discogService = new DiscogService()
 const showService = new ShowService();
 
 export default function List(props: {list?: Show[] | Release[], type?: string, artistDetails?: {name: string}}) {
+  console.log(discogService)
   if (props.type === "artist-list") {
     return (
       <>
         {/* @ts-ignore */}
-        <h4 className="mt-1">Credited as {formatArtistName(props.artistDetails.name)}</h4>
+        <h4 className="mt-1">Credited as {discogService.formatArtistName(props.artistDetails.name)}</h4>
         <p className="mb-1">{props.list?.length} results</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-3">
         {/* @ts-ignore */}
         {props.list?.map(({ id, title, artist, year, thumb }, index) => {
           return (
               <div className="flex flex-col" key={index}>
-                <a href={discogService.formatDiscogsHref(id, artist, title)} target="_blank" rel="noreferrer">
+                <a href={discogService.buildDiscogsHref(id, artist, title)} target="_blank" rel="noreferrer">
                   <img src={thumb} alt="Album cover thumbnail" loading="lazy" className="shadow-md" width="170" height="auto" />
                   <p className="mb-0">{title}</p>
                 </a>

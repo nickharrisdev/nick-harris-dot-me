@@ -19,7 +19,7 @@ export class DiscogService {
     return artistReleaseData;
   }
 
-  formatDiscogsHref = (id: string, artistName: string, title: string) => {
+  buildDiscogsHref = (id: string, artistName: string, title: string) => {
     const baseUrl = "https://www.discogs.com/release/"
     const path = `${id}-${artistName?.replaceAll(" ", "-")}-${title?.replaceAll(" ", "-").replaceAll("'", "")}`
     return `${baseUrl}${path}`
