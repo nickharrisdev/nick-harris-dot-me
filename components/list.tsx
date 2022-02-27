@@ -8,7 +8,6 @@ const discogService = new DiscogService()
 const showService = new ShowService();
 
 export default function List(props: {list?: Show[] | Release[], type?: string, artistDetails?: {name: string}}) {
-  console.log(discogService)
   if (props.type === "artist-list") {
     return (
       <>
