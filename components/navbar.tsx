@@ -25,22 +25,11 @@ export default function Navbar() {
 
   return (
     <>
-      <div>
-        <h1 className="text-xl">
-          Nick Harris
-        </h1>
-        <p className="mb-0">
-          Software developer | Musician
-        </p>
-        <p className="mb-0">
-          Chicago, Illinois
-        </p>
-      </div>
-
       <nav className="nav">
         <Link href="/">
           <a>Home</a>
         </Link>
+        
         <div className="dropdown">
           <span className="dropbtn-container mr-1">
             <button onClick={toggleDropdown} className="dropbtn" aria-label="Toggle dropdown">Music</button>
@@ -58,6 +47,7 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
+
         <Link href="/portfolio-resume.pdf">
           <a target="_blank" rel="noreferrer">Resume</a>  
         </Link>
