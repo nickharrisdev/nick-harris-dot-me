@@ -31,19 +31,11 @@ export default function List(props: {list?: Show[] | Release[], type?: string, a
       </>
    )
   } else if (props.type === "shows-list") {
-    let pastShows: Show[] = [];
-    let upcomingShows: Show[] = [];
-    let today: Date = new Date();
-    props.list?.forEach((show) => {
-      // @ts-ignore
-      if (show.date > today) {
-        // @ts-ignore
-        upcomingShows.push(show);
-      } else {
-        // @ts-ignore
-        pastShows.push(show);
-      }
-    })
+    const today: Date = new Date();
+    // @ts-ignore
+    const pastShows: Show[] = props.list?.filter((show: Show) => show.date < today)
+    // @ts-ignore
+    const upcomingShows: Show[] = props.list?.filter((show: Show) => show.date > today)
     const sortedPastShows = showService.sortShowsByDate(pastShows, "asc");
     const sortedUpcomingShows = showService.sortShowsByDate(upcomingShows, "desc")
 
