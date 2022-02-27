@@ -27,6 +27,13 @@ export default function Colophon() {
           </div>
        )
      })}
+        <p className="mb-1 mt-4 font-bold">
+          <a href="https://621bf9b23270f900085f39e9--agitated-hoover-87d428.netlify.app/nickharris.me/" target="_blank" rel="noopener noreferrer">
+            Lighthouse scores and performance data
+          </a>
+        </p>
+          {/* @ts-ignore */}
+        <speedlify-score speedlify-url="https://621bf9b23270f900085f39e9--agitated-hoover-87d428.netlify.app/" url="https://www.nickharris.me/"></speedlify-score>  
         <p className="mt-3 mb-0">
           Thanks for stopping by.
         </p>
