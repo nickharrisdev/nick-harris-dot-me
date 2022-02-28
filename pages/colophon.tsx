@@ -28,7 +28,7 @@ export default function Colophon() {
        )
      })}
         <p className="mb-1 mt-4 font-bold">
-          <a href="https://621bf9b23270f900085f39e9--agitated-hoover-87d428.netlify.app/nickharris.me/" target="_blank" rel="noopener noreferrer">
+          <a href="https://agitated-hoover-87d428.netlify.app/nickharris.me/" target="_blank" rel="noopener noreferrer">
             Lighthouse scores and performance data
           </a>
         </p>
