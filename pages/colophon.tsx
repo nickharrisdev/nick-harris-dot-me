@@ -33,7 +33,7 @@ export default function Colophon() {
           </a>
         </p>
           {/* @ts-ignore */}
-        <speedlify-score speedlify-url="https://621bf9b23270f900085f39e9--agitated-hoover-87d428.netlify.app/" url="https://www.nickharris.me/"></speedlify-score>  
+        <speedlify-score speedlify-url="https://agitated-hoover-87d428.netlify.app/" url="https://www.nickharris.me/"></speedlify-score>  
         <p className="mt-3 mb-0">
           Thanks for stopping by.
         </p>
