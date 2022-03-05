@@ -40,6 +40,24 @@ export default function Jam({jamData, htmlContent}) {
           </div>
         </>
       }
+      {jamData.moresongs && 
+        <>
+          <h4 className="mt-3">Honorable mentions</h4>
+        {/* @ts-ignore */}  
+         {jamData.moresongs.map(({title, artist, link, description, year}, index)=> {
+           return(
+             <div key={index}>
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <p className="mb-0">{title} by {artist} ({year})</p>
+              </a>
+              <p>
+                {description}
+              </p>
+             </div>
+           )
+         })}
+        </>
+      }
       </div>
       <div className="my-3">
         <h4>Context for this week&apos;s jam</h4>
