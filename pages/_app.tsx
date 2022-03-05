@@ -17,6 +17,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             {/* @ts-ignore */}
         <link rel="stylesheet" href="https://unpkg.com/speedlify-score@1.0.2/speedlify-score.css" media="print" onLoad="this.media='all'" />
         <script src="https://unpkg.com/speedlify-score@1.0.2/speedlify-score.js" async defer></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153547809-1"></script>
+        <script dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-153547809-1');`}}>
+      </script>
       </Head>
       <div className="container">
       <Layout>
