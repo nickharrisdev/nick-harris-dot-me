@@ -47,7 +47,7 @@ export default function Jam({jamData, htmlContent}) {
 
       {/* bandcamp embed */}
       { jamData.bandcampLink &&
-        <iframe src={jamData.bandcampLink} seamless width="350" height="470"><a href="https://dpcddpcd.bandcamp.com/album/dpcd-sings">DPCD SINGS by DPCD</a></iframe>
+        <iframe src={jamData.bandcampLink} seamless width="350" height="470"></iframe>
       }
 
       {/* bonus youtube embed */}
