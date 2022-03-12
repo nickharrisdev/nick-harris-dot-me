@@ -69,7 +69,7 @@ export default function Jam({jamData, htmlContent}) {
            return(
              <div key={index}>
               <a className='max-w-fit' href={link} target="_blank" rel="noopener noreferrer">
-                <p className="mb-0">{title} by {artist} ({year})</p>
+                {title} by {artist} ({year})
               </a>
               <p>
                 {description}
