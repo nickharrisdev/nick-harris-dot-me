@@ -54,7 +54,7 @@ export default function Jam({jamData, htmlContent}) {
       {jamData.bonusLink && 
         <>
           <h4 className="mt-4">Bonus jam</h4>
-          <div className="video-container mt-2">
+          <div className="iframe-container mt-2">
             <iframe className="responsive-iframe" src={jamData.bonusLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </>
