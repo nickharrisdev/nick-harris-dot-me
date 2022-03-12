@@ -27,11 +27,30 @@ export default function Jam({jamData, htmlContent}) {
         <h4 >{jamData.title}</h4>
         <p>{format(new Date(jamData.date), "MMM d, yyyy")}</p>
       </div>
+      
+      {/* image */}
+      { jamData.image && 
+      <figure className="max-w-lg mb-3">
+        <img src={jamData.image.src} alt={jamData.image.alt} width="512" height="384" loading="lazy" className="shadow-md weekly-jams-img rounded" />
+        <figcaption className="text-xs">{jamData.image.caption}</figcaption>
+      </figure>
+      }
+
       <div className="mb-3" dangerouslySetInnerHTML={{ __html: htmlContent }} />
       <div className="max-w-md">
-      <div className="video-container">
-        <iframe className="responsive-iframe" src={jamData.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      </div>
+      {/* youtube embed */}
+      { jamData.youtubeLink && 
+        <div className="iframe-container">
+          <iframe className="responsive-iframe" src={jamData.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      }
+
+      {/* bandcamp embed */}
+      { jamData.bandcampLink &&
+        <iframe src={jamData.bandcampLink} seamless width="350" height="470"><a href="https://dpcddpcd.bandcamp.com/album/dpcd-sings">DPCD SINGS by DPCD</a></iframe>
+      }
+
+      {/* bonus youtube embed */}
       {jamData.bonusLink && 
         <>
           <h4 className="mt-4">Bonus jam</h4>
@@ -40,9 +59,11 @@ export default function Jam({jamData, htmlContent}) {
           </div>
         </>
       }
+
+      {/* moresongs list */}
       {jamData.moresongs && 
         <>
-          <h4 className="mt-3">Honorable mentions</h4>
+          <h4 className="mt-3">Some more jams</h4>
         {/* @ts-ignore */}  
          {jamData.moresongs.map(({title, artist, link, description, year}, index)=> {
            return(

@@ -78,7 +78,7 @@ ul li {
 }
 
 /* jams */
-.video-container {
+.iframe-container {
   position: relative;
   padding-bottom: 56.25%;
   overflow: hidden;
@@ -91,6 +91,11 @@ ul li {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.weekly-jams-img {
+  width: 100%;
+  height: auto;
 }
 
 /* dropdown */
