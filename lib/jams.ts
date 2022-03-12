@@ -26,7 +26,7 @@ export function getSortedJamsData() {
 
   allJamsData.sort(function (a, b) {
     // @ts-ignore
-    return a.date - b.date;
+    return new Date(b.date) - new Date(a.date);
   })
   return allJamsData;
 }
