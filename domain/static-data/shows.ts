@@ -3,6 +3,7 @@ import { Groups } from "../types/groups.enum";
 // Todo possibilities -- add city/state? sort by year once more are added? 
 
 export default [
+  { venue: "Elmhurst Hall", group: Groups.YMIAH, date: new Date("04/07/2022"), link: "https://elmhursthall.com/event/young-man-in-a-hurry/" },
   { venue: "The Hideout", group: Groups.YMIAH, date: new Date("06/24/2022"), link: "https://hideoutchicago.com/" },
   { venue: "Codfish Hollow Barnstormers (Iowa)", group: Groups.MOONER, date: new Date("07/09/2022"), link: "https://www.bandsintown.com/e/1021816142-mooner-at-codfish-hollow-barnstormers" },
   { venue: "Lakeview Festival of the Arts", group: Groups.MOONER, date: new Date("09/10/2022"), link: "https://lakevieweastfestivalofthearts.com/" },
