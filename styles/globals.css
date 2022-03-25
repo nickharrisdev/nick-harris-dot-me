@@ -57,6 +57,7 @@ ul li {
 }
 
 .dark {
+  transition: ease-in-out 300ms;
   color: white;
   background-color: black;
 }
