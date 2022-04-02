@@ -11,7 +11,7 @@ export default function WeeklyJams({
   return (
     <>
       <h2 className="mt-3">Weekly Jams</h2>
-      <p>I post my favorite song(s) of the week here + one or two other notes.</p>
+      <p>Short blog posts about the music that intersects with my life.</p>
       <div className="my-3">
         {allJamsData?.map(({ id, date, title }) => (
           <div className="flex" key={id}>
