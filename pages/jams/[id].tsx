@@ -79,6 +79,18 @@ export default function Jam({jamData, htmlContent}) {
          })}
         </>
       }
+
+      {/* comment of the week */}
+      { jamData.commentImage && 
+        <>
+          <h4 className="mt-4">Gold nugget comment of the week</h4>
+          <figure className="max-w-lg mb-3">
+            <img src={jamData.commentImage.src} alt={jamData.commentImage.alt} width="512" height="384" loading="lazy" className="shadow-md weekly-jams-img rounded" />
+            <figcaption className="text-xs">{jamData.commentImage.caption}</figcaption>
+          </figure>
+        </>
+      }
+
       </div>
       <div className="my-3">
         <h4>Context for this week&apos;s jam</h4>
