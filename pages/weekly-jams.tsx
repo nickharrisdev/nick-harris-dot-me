@@ -12,7 +12,7 @@ export default function WeeklyJams({
   return (
     <>
       <h2 className="mt-3">Weekly Jams</h2>
-      <p>Short blog posts about the music that intersected with my life over the course of the last week. Updated on Saturdays.</p>
+      <p>Short blog posts about the music that intersects with my life over the course of each week. Updated on Saturdays.</p>
       <div className="my-3">
         {allJamsData?.map(({ id, date, title, artist, releaseYear }) => (
           <div className="grid grid-cols-3 max-w-lg sm:grid-cols-5" key={id}>
