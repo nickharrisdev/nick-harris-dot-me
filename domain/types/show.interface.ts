@@ -4,5 +4,6 @@ export interface Show {
   date: Date;
   time?: string;
   link?: string;
+  city?: string;
   description?: string;
 }
