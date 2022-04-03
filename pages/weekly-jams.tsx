@@ -1,6 +1,7 @@
 import format from "date-fns/format";
 import { GetStaticProps } from "next"
 import Link from "next/link"
+import { CSSProperties } from "react";
 import { getSortedJamsData } from "../lib/jams"
 
 export default function WeeklyJams({
@@ -8,18 +9,26 @@ export default function WeeklyJams({
 }: {
   allJamsData: any[]
 }) {
+
+  const styles: CSSProperties = {
+    width: "150px",
+  };
+
   return (
     <>
       <h2 className="mt-3">Weekly Jams</h2>
       <p>Short blog posts about the music that intersected with my life over the course of the last week. Updated on Saturdays.</p>
       <div className="my-3">
         {allJamsData?.map(({ id, date, title }) => (
-          <div className="flex" key={id}>
-            <p className="mb-0">{format(new Date(date), "MMM d, yyyy")}&nbsp;-&nbsp;
+          <div className="grid grid-cols-3 max-w-lg sm:grid-cols-5" key={id}>
+            <p className="mb-0 col-span-1" style={styles}>{format(new Date(date), "MMM dd, yyyy")}</p>
+
+
+            <div className="flex flex-wrap w-auto col-span-2 sm:col-span-4">
             <Link href={`/jams/${id}`}>
               <a>{title}</a>
             </Link>
-            </p>
+            </div>
           </div>
           ))}
       </div> 
