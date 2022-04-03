@@ -1,5 +1,7 @@
 ---
-title: "Don't Drop Me by Charlie Reed"
+title: "Don't Drop Me"
+artist: "Charlie Reed"
+releaseYear: "2022"
 date: "02/26/2022"
 youtubeLink: "https://www.youtube.com/embed/hJmM9wd63xU"
 bonusLink: "https://www.youtube.com/embed/ku0Fc9sxL14"

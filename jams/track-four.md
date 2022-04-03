@@ -1,5 +1,7 @@
 ---
-title: "Track Four by This Is Lorelei"
+title: "Track Four"
+artist: "This is Lorelei"
+releaseYear: "2022"
 date: "03/26/2022"
 bandcampLink: "https://bandcamp.com/EmbeddedPlayer/album=1662963487/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/track=3022197135/transparent=true/"
 moresongs:

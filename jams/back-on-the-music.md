@@ -1,5 +1,7 @@
 ---
-title: "Back on the Music by Paul Cherry"
+title: "Back on the Music"
+artist: "Paul Cherry"
+releaseYear: "2022"
 date: "03/20/2022"
 youtubeLink: "https://www.youtube.com/embed/PjVnZ61j8hU"
 headline: "Block Club Chicago - 'Willie Wilson Giving Away $1 Million In Free Gas Next Week In Chicago'"

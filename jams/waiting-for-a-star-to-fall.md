@@ -1,5 +1,7 @@
 ---
-title: "Waiting for a Star to Fall by Boy Meets Girl"
+title: "Waiting for a Star to Fall"
+artist: "Boy Meets Girl"
+releaseYear: "1988"
 date: "04/02/2022"
 youtubeLink: "https://www.youtube.com/embed/RhxF9Qg5mOU"
 headline: "The Guardian - 'Harry Styles: ‘I’m not just sprinkling in sexual ambiguity to be interesting’'"

@@ -1,5 +1,7 @@
 ---
-title: "Make Believe by DPCD"
+title: "Make Believe"
+artist: "DPCD"
+releaseYear: "2021"
 date: "03/12/2022"
 image:
   src: "/dpcd.jpeg"

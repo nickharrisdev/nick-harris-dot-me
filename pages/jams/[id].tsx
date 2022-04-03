@@ -24,7 +24,7 @@ export default function Jam({jamData, htmlContent}) {
   return (
     <>
       <div className="my-3">
-        <h4 >{jamData.title}</h4>
+        <h4 >{jamData.title} by  {jamData.artist} ({jamData.releaseYear})</h4>
         <p>{format(new Date(jamData.date), "MMM d, yyyy")}</p>
       </div>
       

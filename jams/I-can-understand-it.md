@@ -1,5 +1,7 @@
 ---
-title: "I can understand it by Bobby Womack"
+title: "I can understand it"
+artist: "Bobby Womack"
+releaseYear: "1972"
 date: "03/05/2022"
 youtubeLink: "https://www.youtube.com/embed/hOcmdyf2PNI"
 headline: "Block Club Chicago - 'Drug Dealing, But No Meth Lab, Found At West Ridge Social Club Raided By Police, Alderman Says'"
