@@ -1,4 +1,5 @@
 import format from "date-fns/format";
+import Link from "next/link";
 import { DiscogService } from "../domain/services/discog-service";
 import { ShowService } from "../domain/services/show-service";
 import { Release } from "../domain/types/release.interface";
@@ -43,20 +44,35 @@ export default function List(props: {list?: Show[] | Release[], type?: string, a
       <>
         <h3>Upcoming</h3>
         {/* @ts-ignore */}
-        {sortedUpcomingShows?.map(({venue, group, date, link}, index) => {
+        {sortedUpcomingShows?.map(({venue, group, date, link, city}, index) => {
           return (
-            <a href={link} target="_blank" rel="noopener noreferrer" className={`flex max-w-fit ${link ? "" : "no-underline"}`} key={index}>
-              <p className="mb-0">{`${format(date, "MMM dd, yyyy")}`}&nbsp;-&nbsp;<strong>{venue}</strong> with {group}</p>
-            </a>
+            <div className="grid grid-cols-3 max-w-lg sm:grid-cols-5" key={index}>
+              <p className="mb-0 col-span-1">
+              {`${format(date, "MMM dd, yyyy")}`}
+              </p>
+              <div className="flex flex-wrap w-auto col-span-2 sm:col-span-4">
+                <Link href={link as string}>
+                  <a target="_blank" rel="noopener noreferrer"><strong>{venue}</strong> ({city}) with {group}</a>
+                </Link>
+              </div>
+            </div>
           )
         })}
+
         <h3 className="mt-4">Previous</h3>
         {/* @ts-ignore */}
-        {sortedPastShows?.map(({venue, group, date, link}, index) => {
+        {sortedPastShows?.map(({venue, group, date, link, city}, index) => {
           return (
-            <a href={link} target="_blank" rel="noopener noreferrer" className={`flex max-w-fit ${link ? "" : "no-underline"}`} key={index}>
-              <p className="mb-0">{`${format(date, "MMM dd, yyyy")}`}&nbsp;-&nbsp;<strong>{venue}</strong> with {group}</p>
-            </a>
+            <div className="grid grid-cols-3 max-w-lg sm:grid-cols-5" key={index}>
+              <p className="mb-0 col-span-1">
+              {`${format(date, "MMM dd, yyyy")}`}
+              </p>
+              <div className="flex flex-wrap w-auto col-span-2 sm:col-span-4">
+                <Link href={link as string}>
+                <a target="_blank" rel="noopener noreferrer"><strong>{venue}</strong> ({city}) with {group}</a>
+                </Link>
+              </div>
+            </div>
           )
         })}
       </>
