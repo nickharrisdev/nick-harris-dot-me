@@ -91,6 +91,16 @@ export default function Jam({jamData, htmlContent}) {
         </>
       }
 
+      {/* tweet of the week */}
+      { jamData.tweet && 
+        <>
+          <h4>Twitter weirdness
+          </h4>
+          <p>{jamData.tweet.description}</p>
+          <blockquote className="twitter-tweet"><p lang="und" dir="ltr"><a href={jamData.tweet.picHref}>{jamData.tweet.picAnchorText}</a></p>{jamData.tweet.accountInfoText}<a href={jamData.tweet.tweetHref}>{jamData.tweet.date}</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+        </>
+      }
+
       </div>
       <div className="my-3">
         <h4>Context for this week&apos;s jam</h4>
