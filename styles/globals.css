@@ -29,9 +29,23 @@ h5 {
   font-size: var(--font-size-md);
 }
 
+:link,
+:visited,
+.dropbtn {
+  text-decoration: underline;
+  text-decoration-color: #53beba;
+}
+
+:link:active,
+:link:focus,
+:link:hover,
+:visited:hover,
+.dropbtn:hover {
+  color: #53beba;
+}
+
 a {
   color: inherit;
-  text-decoration: underline;
 }
 
 h2 a {
@@ -116,7 +130,6 @@ ul li {
 }
 
 .dropdown-content a {
-  text-decoration: underline;
   display: block;
 }
 
@@ -134,7 +147,6 @@ ul li {
 
 .dropdown-content.dark-mode a:hover {
   background-color: white !important;
-  color: black !important;
 }
 
 /* custom utils */
