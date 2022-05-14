@@ -15,8 +15,8 @@ moresongs:
     year: "2022"
     link: "https://waxwellweckman.bandcamp.com/track/ancient-tear"
     description: "Another one from Max Beckman's album that came out last month. This instrumental stands shoulder to shoulder with some of the best progressive rock stuff from the 1970s in my opinion, and directly recalls parts of Zappa's 'Hot Rats' specifically."
-headline: "Block Club Chicago - 'Chicago River To Be Dyed Green Again, And Parades Are Back For St. Patrick’s Day Weekend'"
-weather: "Lots of sunshine. High near 25F. Winds W at 10 to 20 mph."
+headline: "Block Club Chicago - 'Beloved Piping Plover Monty Has Died At Montrose Beach: ‘He Was The King Of Montrose’'"
+weather: "Partly to mostly cloudy. A stray shower or thunderstorm is possible. High 76F. Winds ENE at 5 to 10 mph."
 ---
 
 Amid the deluge of new music (it feels like it's been a lot but maybe that's just me) coming out in the last few weeks, Kurt Vile's record '(watch my moves)' has had me returning for repeat listens. Maybe it's the weather heating up and summer lethargy setting in.
