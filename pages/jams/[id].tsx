@@ -101,6 +101,17 @@ export default function Jam({jamData, htmlContent}) {
         </>
       }
 
+            {/* image */}
+      { jamData.tweetImage && 
+        <>
+          <h4 className="mt-4">Twitter weirdness</h4>
+          <figure className="max-w-lg mb-3">
+            <img src={jamData.tweetImage.src} alt={jamData.tweetImage.alt} width="512" height="384" loading="lazy" className="shadow-md weekly-jams-img rounded" />
+            <figcaption className="text-xs">{jamData.tweetImage.caption}</figcaption>
+          </figure>
+        </>
+      }
+
       </div>
       <div className="my-3">
         <h4>Context for this week&apos;s jam</h4>
