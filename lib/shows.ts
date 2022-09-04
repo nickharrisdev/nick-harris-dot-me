@@ -8,15 +8,15 @@ const showNotesDirectory = path.join(process.cwd(), 'show-notes')
 
 export function getShowData(id: string) {
   const fullPath = path.join(showNotesDirectory, `${id}.md`)
-  console.log(fullPath)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-  const matterResult = matter(fileContents)
+  const fileContents = fs.existsSync(fullPath) ? fs.readFileSync(fullPath, 'utf8') : undefined;
+
+  const matterResult = fileContents ? matter(fileContents) : undefined;
 
   const showData = shows.find((show) => {
     return getShowId(show.date) === id;
   })
-  return { ...showData, ...matterResult.data, contentMd: matterResult.content }
+  return { ...showData, ...matterResult?.data, contentMd: matterResult?.content }
 }
 
 export const getAllShowIds = () => {
