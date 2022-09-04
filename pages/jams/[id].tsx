@@ -68,7 +68,7 @@ export default function Jam({jamData, htmlContent}) {
          {jamData.moresongs.map(({title, artist, link, description, year}, index)=> {
            return(
              <div key={index}>
-              <a className='max-w-fit' href={link} target="_blank" rel="noopener noreferrer">
+              <a className='max-w-fit' href={link} target="_blank" title="Click to change your life" rel="noopener noreferrer">
                 {title} by {artist} ({year})
               </a>
               <p>
