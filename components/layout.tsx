@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutProps) {
           Nick Harris
         </h1>
         <p className="mb-0">
-          Software developer | Musician
+          Software engineer | Musician
         </p>
         <p className="mb-0">
           Chicago, Illinois

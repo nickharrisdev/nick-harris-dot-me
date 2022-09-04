@@ -12,7 +12,7 @@ export default function Home({
     <>
       <img src="/me.jpeg" alt="A picture of Nick Harris in a red hat." width="200" height="200" className="shadow-md rounded my-4"/>
       <p >
-        I&apos;m a self-taught software developer with a diverse professional background. Specializing on the front end, I create UIs that are beautiful, accessible, intuitive, and performant for users, while also reusable, extensible, and maintainable for other developers. 
+        I&apos;m a self-taught software engineer with a diverse professional background. Specializing on the front end, I create UIs that are beautiful, accessible, intuitive, and performant for users, while also reusable, extensible, and maintainable for other engineers. 
       </p>
       <p> 
         I&apos;m inspired by technology that actively strives to make the world a better place. In addition, I volunteer my expertise regularly to help non profit organizations with missions that move me.
