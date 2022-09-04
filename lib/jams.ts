@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { Jam } from '../domain/types/jam.interface'
 
 const jamsDirectory = path.join(process.cwd(), 'jams')
 
@@ -16,7 +17,7 @@ export function getSortedJamsData() {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
     // Use gray-matter to parse the jam metadata section
-    const matterResult = matter(fileContents)
+    const matterResult = matter(fileContents) as unknown as { data: Jam }
     // Combine the data with the id
     return {
       id,
@@ -25,28 +26,13 @@ export function getSortedJamsData() {
   })
 
   allJamsData.sort(function (a, b) {
-    // @ts-ignore
-    return new Date(b.date) - new Date(a.date);
+    return (new Date(b.date) as any) - (new Date(a.date) as any);
   })
   return allJamsData;
 }
 
 export function getAllJamIds() {
   const fileNames = fs.readdirSync(jamsDirectory)
-
-  // Returns an array that looks like this:
-  // [
-  //   {
-  //     params: {
-  //       id: 'ssg-ssr'
-  //     }
-  //   },
-  //   {
-  //     params: {
-  //       id: 'pre-rendering'
-  //     }
-  //   }
-  // ]
   return fileNames.map(fileName => {
     return {
       params: {

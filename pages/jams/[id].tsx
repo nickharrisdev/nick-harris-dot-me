@@ -1,9 +1,13 @@
 import format from 'date-fns/format';
+import { Jam } from '../../domain/types/jam.interface';
 import { getAllJamIds, getJamData } from '../../lib/jams'
 import markdownToHtml from '../../lib/markdownToHtml'
 
-// @ts-ignore
-export async function getStaticProps({ params }) {
+interface JamPageParams {
+  params: {id: string}
+}
+
+export async function getStaticProps({ params }: JamPageParams) {
   const jamData = getJamData(params.id)
 
   const getHtmlContent = async () => {
@@ -19,8 +23,12 @@ export async function getStaticProps({ params }) {
   }
 }
 
-// @ts-ignore
-export default function Jam({jamData, htmlContent}) {
+interface JamPageProps {
+  jamData: Jam;
+  htmlContent: string;
+} 
+
+export default function JamDetails({jamData, htmlContent}: JamPageProps) {
   return (
     <>
       <div className="my-3">
@@ -91,7 +99,7 @@ export default function Jam({jamData, htmlContent}) {
         </>
       }
 
-      {/* tweet of the week */}
+      {/* tweet of the week TODO: deprecate */}
       { jamData.tweet && 
         <>
           <h4>Twitter weirdness
@@ -101,7 +109,7 @@ export default function Jam({jamData, htmlContent}) {
         </>
       }
 
-            {/* image */}
+      {/* tweet image */}
       { jamData.tweetImage && 
         <>
           <h4 className="mt-4">Twitter weirdness</h4>

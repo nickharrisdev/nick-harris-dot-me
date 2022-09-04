@@ -1,9 +1,10 @@
 import { Groups } from "../types/groups.enum";
+import { Show } from "../types/show.interface";
 
-export default [
+const shows: Show[] = [
   { city: "Chicago, IL", venue: "A friend's wedding", group: Groups.MOONER, date: new Date("06/25/2022"), link: "https://en.wikipedia.org/wiki/Wedding" },
-  { city: "Chicago, IL", venue: "Porchfest", group: Groups.MOONER, date: new Date("08/21/2022"), link: "https://www.lakeviewroscoevillage.org/community-events/porchfest-lakeview-1-h7gbg" },
-  { city: "Chicago, IL", venue: "Bucktown Arts Fest", group: Groups.MOONER, date: new Date("08/27/2022"), link: "https://www.bucktownartsfest.com/" },
+  { city: "Chicago, IL", venue: "Porchfest", group: Groups.MOONER, date: new Date("08/21/2022"), link: "https://www.lakeviewroscoevillage.org/community-events/porchfest-lakeview-1-h7gbg", notes: { emoji: "🌳🐈🏍" } },
+  { city: "Chicago, IL", venue: "Bucktown Arts Fest", group: Groups.MOONER, date: new Date("08/27/2022"), link: "https://www.bucktownartsfest.com/", notes: { emoji: "😎🤘🏻🎤❓❓" } },
   { city: "Elmhurst, IL", venue: "Elmhurst Hall", group: Groups.YMIAH, date: new Date("04/07/2022"), link: "https://elmhursthall.com/event/young-man-in-a-hurry/" },
   { city: "Chicago, IL", venue: "The Hideout", group: Groups.YMIAH, date: new Date("06/24/2022"), link: "https://hideoutchicago.com/event/young-man-in-a-hurry-%c2%b7-neptunes-core/" },
   { city: "Chicago, IL", venue: "Lakeview Festival of the Arts", group: Groups.MOONER, date: new Date("09/10/2022"), link: "https://lakevieweastfestivalofthearts.com/" },
@@ -13,3 +14,5 @@ export default [
   { city: "Madison, WI", venue: "Bur Oak", group: Groups.YMIAH, date: new Date("02/11/2022"), link: "https://theburoakmadison.com/shows/young-man-in-a-hurry" },
   { city: "New York City, NY", venue: "Bowery Electric", group: Groups.YMIAH, date: new Date("02/14/2022"), link: "https://dice.fm/event/oxrvr-young-man-in-a-hurry-album-release-ft-mary-hood-olivia-reid-mannequin-heist-14th-feb-the-bowery-electric-new-york-tickets?lng=en-US" }
 ]
+
+export default shows;

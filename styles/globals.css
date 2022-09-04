@@ -108,7 +108,8 @@ ul li {
   border: 0;
 }
 
-.weekly-jams-img {
+.weekly-jams-img,
+.show-img {
   width: 100%;
   height: auto;
 }

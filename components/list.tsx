@@ -4,6 +4,7 @@ import { DiscogService } from "../domain/services/discog-service";
 import { ShowService } from "../domain/services/show-service";
 import { Release } from "../domain/types/release.interface";
 import { Show } from "../domain/types/show.interface";
+import { getShowId } from "../lib/utilities/get-show-id";
 
 const discogService = new DiscogService()
 const showService = new ShowService();
@@ -58,7 +59,8 @@ export default function List(props: {list?: Show[] | Release[], type?: string, a
           )
         })}
         <h3 className="mt-4">Previous</h3>
-        {sortedPastShows?.map(({venue, group, date, link, city}, index) => {
+        {sortedPastShows?.map(({venue, group, date, link, city, notes}, index) => {
+          const showId = getShowId(date);
           return (
             <div className="grid grid-cols-3 max-w-lg sm:grid-cols-5" key={index}>
               <p className="mb-0 col-span-1">
@@ -69,6 +71,17 @@ export default function List(props: {list?: Show[] | Release[], type?: string, a
                 <a target="_blank" rel="noopener noreferrer"><strong>{venue}</strong> ({city}) with {group}</a>
                 </Link>
               </div>
+              { notes && 
+                <>
+                  <div className="mb-0 col-span-1"></div>
+                  <div className="col-span-2 sm:col-span-4">
+                    <Link href={link as string}>
+                      <a  href={`/shows/${showId}`} className="text-sm m-0" rel="noopener noreferrer">Show notes</a>
+                    </Link>
+                    &nbsp;<span>{notes?.emoji}</span>
+                  </div>
+                </>
+              }
             </div>
           )
         })}

@@ -2,8 +2,11 @@ import Footer from './footer'
 import Navbar from './navbar'
 import ThemeToggle from './theme-toggle'
 
-// @ts-ignore
-export default function Layout({ children }) {
+interface LayoutProps {
+  children: any;
+}
+
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <header>

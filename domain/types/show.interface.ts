@@ -6,4 +6,15 @@ export interface Show {
   link?: string;
   city?: string;
   description?: string;
+  notes?: ShowNotes
+  id?: string;
+  images?: {
+    src?: string;
+    alt?: string;
+    caption?: string
+  }[];
+}
+
+interface ShowNotes {
+  emoji?: string;
 }
