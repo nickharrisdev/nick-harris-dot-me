@@ -12,6 +12,7 @@ moresongs:
     year: "1979"
     link: "https://www.youtube.com/watch?v=anc_WMrWWTU"
     description: "I came across some very affordable Marshall Crenshaw records while crate diving this weekend at Rattleback Records in Andersonville. The guy is a master melody craftsman, and this is one of his best tunes that always gets stuck in my head. Also, I have to brag because the cashier at the record store compliemented my find 🏆."
+publishDate: "09/04/2022"
 ---
 
 I've had the new beths singles on repeat this week, and will probably for some time. This is the exact type of music that hooks me on the first listen. It's so well crafted, well written (I love the lines "And I can close the door on us / But the room still exists /

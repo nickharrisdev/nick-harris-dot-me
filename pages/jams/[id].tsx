@@ -118,6 +118,14 @@ export default function Jam({jamData, htmlContent}) {
         <p className="mb-0"><span className="font-bold">Chicago weather:</span> {jamData.weather}</p>
         <p className="mb-0"><span className="font-bold">Top news:</span> {jamData.headline}</p>
       </div>
+
+      { jamData.publishDate && 
+        <>
+          <div className="mt-6">
+            <p className="italic text-sm">Posted {format(new Date(jamData.publishDate), "MMM d, yyyy")}</p>
+          </div>
+        </>
+      }
     </>
   )
 }
