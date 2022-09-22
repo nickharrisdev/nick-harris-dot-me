@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mt-4">
         <div className="text-xs">
           Reach me: 
-          <a href="mailto:nick@nickharris.me" target="_blank" rel="noreferrer" aria-label="Email" title="Email" className="mx-1">
+          <a href="mailto:nharris614@gmail.com" target="_blank" rel="noreferrer" aria-label="Email" title="Email" className="mx-1">
             Email
           </a>
           <a href="https://www.linkedin.com/in/nick-harris-web-dev/" rel="noreferrer" aria-label="Linked In" target="_blank" title="Linked In" className="mr-1">
