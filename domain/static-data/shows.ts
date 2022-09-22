@@ -1,7 +1,12 @@
 import { Groups } from "../types/groups.enum";
 import { Show } from "../types/show.interface";
 
+// Templates
+//  { city: "Chicago, IL", venue: "A friend's wedding", group: Groups.MOONER, date: new Date("06/25/2022"), link: "https://en.wikipedia.org/wiki/Wedding" }
+// { city: "Chicago, IL", venue: "Burlington", group: Groups.YMIAH, date: new Date("11/11/2022"), link: "https://www.bucktownartsfest.com/", notes: { emoji: "😎🤘🏻🎤❓❓" } },
+
 const shows: Show[] = [
+  { city: "Chicago, IL", venue: "Burlington", group: Groups.YMIAH, date: new Date("11/11/2022"), link: "http://www.theburlingtonbar.com/month.calendar/2022/11/21/-" },
   { city: "Chicago, IL", venue: "A friend's wedding", group: Groups.MOONER, date: new Date("06/25/2022"), link: "https://en.wikipedia.org/wiki/Wedding" },
   { city: "Chicago, IL", venue: "Porchfest", group: Groups.MOONER, date: new Date("08/21/2022"), link: "https://www.lakeviewroscoevillage.org/community-events/porchfest-lakeview-1-h7gbg", notes: { emoji: "🌳🐈🏍" } },
   { city: "Chicago, IL", venue: "Bucktown Arts Fest", group: Groups.MOONER, date: new Date("08/27/2022"), link: "https://www.bucktownartsfest.com/", notes: { emoji: "😎🤘🏻🎤❓❓" } },
