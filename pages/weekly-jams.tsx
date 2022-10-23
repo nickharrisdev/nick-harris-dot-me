@@ -12,7 +12,8 @@ export default function WeeklyJams({
   return (
     <>
       <h2 className="mt-3">Weekly Jams</h2>
-      <p>Short blog posts about the music that intersects with my life over the course of each week. Updated on Saturdays.</p>
+      <p className="mb-0">Short blog posts about the music that intersects with my life over the course of each week. Updated most weekends.</p>
+      <p><a href="https://open.spotify.com/playlist/5BWFJGx0U1a93zP5dWj3Zn?si=d08b42e4b99d4f65" target="_blank" rel="noopener noreferrer">Follow the playlist on Spotify</a></p>
       <div className="my-3">
         {allJamsData?.map(({ id, date, title, artist, releaseYear }) => (
           <div className="grid grid-cols-3 max-w-lg sm:grid-cols-5" key={id}>
