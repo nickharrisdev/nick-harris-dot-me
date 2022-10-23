@@ -5,7 +5,7 @@ releaseYear: "2022"
 date: "10/15/2022"
 youtubeLink: "https://www.youtube.com/embed/72dtO5O_EBA"
 headline: "Block Club Chicago - 'An Overwhelmed Immigration System Is Facing A Shortage Of Attorneys Amid A Growing Backlog Of Cases'"
-# weather: "A mix of clouds and sun. High 44F. Winds E at 5 to 10 mph."
+weather: "It just got cold all of the sudden."
 moresongs:
   - title: "Unspirited"
     artist: "Guided by Voices"
