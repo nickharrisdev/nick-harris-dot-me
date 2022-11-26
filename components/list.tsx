@@ -44,7 +44,7 @@ export default function List(props: {list?: Show[] | Release[], type?: string, a
     return (
       <>
         <h3>Upcoming</h3>
-        {sortedUpcomingShows?.map(({venue, group, date, link, city}, index) => {
+        {sortedUpcomingShows?.length ? sortedUpcomingShows?.map(({venue, group, date, link, city}, index) => {
           return (
             <div className="grid grid-cols-3 max-w-lg sm:grid-cols-5" key={index}>
               <p className="mb-0 col-span-1">
@@ -57,7 +57,7 @@ export default function List(props: {list?: Show[] | Release[], type?: string, a
               </div>
             </div>
           )
-        })}
+        }) : "No upcoming shows."}
         <h3 className="mt-4">Previous</h3>
         {sortedPastShows?.map(({venue, group, date, link, city, notes}, index) => {
           const showId = getShowId(date);
