@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Footer from './footer'
 import Navbar from './navbar'
 import ThemeToggle from './theme-toggle'
@@ -11,7 +12,9 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <header>
         <h1 className="text-xl">
-          Nick Harris
+          <Link href="/">
+            <a>Nick Harris</a>
+          </Link>
         </h1>
         <p className="mb-0">
           Software engineer | Musician
