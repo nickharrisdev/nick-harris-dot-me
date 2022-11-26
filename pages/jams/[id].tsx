@@ -120,6 +120,7 @@ export default function JamDetails({jamData, htmlContent}: JamPageProps) {
         </>
       }
 
+      {/* CONTEXT */}
       </div>
       <div className="my-3">
         <h4>Context for this week&apos;s jam</h4>
@@ -127,13 +128,10 @@ export default function JamDetails({jamData, htmlContent}: JamPageProps) {
         <p className="mb-0"><span className="font-bold">Top news:</span> {jamData.headline}</p>
       </div>
 
-      { jamData.publishDate && 
-        <>
-          <div className="mt-6">
-            <p className="italic text-sm">Posted {format(new Date(jamData.publishDate), "MMM d, yyyy")}</p>
-          </div>
-        </>
-      }
+      {/* POSTED  */}
+      <div className="mt-6">
+        <p className="italic text-sm">Posted {format(new Date(jamData.publishDate || jamData.date), "MMM d, yyyy")}</p>
+      </div>
     </>
   )
 }
