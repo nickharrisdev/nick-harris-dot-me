@@ -1,4 +1,5 @@
 export interface Jam {
+  id?: string;
   title?: string;
   artist?: string;
   releaseYear?: string;
@@ -32,5 +33,6 @@ export interface Jam {
   };
   weather: string;
   headline: string;
-  publishDate: string;
+  publishDate?: string;
+  yearPosted?: number;
 }
