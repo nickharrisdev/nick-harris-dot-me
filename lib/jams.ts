@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import { Jam } from '../domain/types/jam.interface'
 
 const jamsDirectory = path.join(process.cwd(), 'jams')
-
+// TODO: see if I can change the return value to a map -- postedYear to jam array? significantly less looping. 
 export function getSortedJamsData() {
   // Get file names under /jams
   const fileNames = fs.readdirSync(jamsDirectory)
@@ -18,9 +18,12 @@ export function getSortedJamsData() {
 
     // Use gray-matter to parse the jam metadata section
     const matterResult = matter(fileContents) as unknown as { data: Jam }
-    // Combine the data with the id
+
+    const postDate = matterResult.data.date;
+    const yearPosted = new Date(postDate).getFullYear();
     return {
       id,
+      yearPosted,
       ...matterResult.data
     }
   })
