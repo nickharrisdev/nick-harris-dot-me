@@ -2,17 +2,17 @@ import format from "date-fns/format";
 import { GetServerSideProps } from "next"
 import Link from "next/link"
 import { Jam } from "../domain/types/jam.interface";
-import { getJamsByYearPosted } from "../lib/jams"
+import { getJamsByYearPosted, yearsOfPosts } from "../lib/jams"
 
 export default function WeeklyJams({
   jamsData,
-  selectedYear
+  selectedYear,
+  years
 }: {
   jamsData: Jam[],
   selectedYear: number,
+  years: string[]
 }) {
-  const yearsOfPosts = [2022, 2023]
-
   return (
     <>
       <h2 className="mt-3">Weekly Jams</h2>
@@ -31,8 +31,8 @@ export default function WeeklyJams({
           ))}
       </div> 
       <h4 className="mb-0">Posts from other years</h4>
-      {yearsOfPosts?.map((year, index) => {
-        if (year !== Number(selectedYear)) {
+      {years?.map((year, index) => {
+        if (year !== String(selectedYear)) {
           return (
             <Link href={`/weekly-jams?year=${year}`} key={index}><a className="mr-1">{year}</a></Link>
           )
@@ -45,10 +45,12 @@ export default function WeeklyJams({
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const selectedYear = Number(context.query?.year) || new Date().getFullYear();
   const jamsData = getJamsByYearPosted(selectedYear);
+  const years = yearsOfPosts;
   return {
     props: {
       jamsData,
-      selectedYear
+      selectedYear,
+      years
     }
   }
 }

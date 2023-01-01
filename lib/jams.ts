@@ -3,7 +3,14 @@ import path from 'path'
 import matter from 'gray-matter'
 import { Jam } from '../domain/types/jam.interface'
 
+const getDirectories = (source: string) => {
+  return readdirSync(source, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name)
+}
+
 const jamsDirectory = path.join(process.cwd(), 'jams')
+export const yearsOfPosts = getDirectories(jamsDirectory);
 
 export function getJamsByYearPosted(year: number) {
   const postedYearDirectory = path.join(process.cwd(), `jams/${year}`);
@@ -36,12 +43,6 @@ export function getJamsByYearPosted(year: number) {
 }
 
 export function getAllJamIds() {
-  const getDirectories = (source: string) => {
-    return readdirSync(source, { withFileTypes: true })
-      .filter(dirent => dirent.isDirectory())
-      .map(dirent => dirent.name)
-  }
-
   let files: { fileName: string, year: string }[] = [];
 
   getDirectories(jamsDirectory).forEach((dir) => {
