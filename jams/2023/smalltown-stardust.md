@@ -10,4 +10,4 @@ weather: "Overcast. Low 34F. Winds light and variable."
 publishDate: "01/01/2023"
 ---
 
-New one from the Tuffmeister. I heard this on the WFMU morning show 'Wake and Bake' the other day, but I've been following King Tuff for a while. Looking forward to the forthcoming album.
+New one from the Tuffmeister. I heard this on the WFMU morning show 'Wake and Bake' the other day while running on the treadmill at the gym. I probably looked like a fool as I tried to look up and save the song on Spotify while running. Looking forward to the forthcoming album.
