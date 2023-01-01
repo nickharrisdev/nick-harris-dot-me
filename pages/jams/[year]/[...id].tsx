@@ -1,15 +1,15 @@
 import format from 'date-fns/format';
-import { Jam } from '../../domain/types/jam.interface';
-import { getAllJamIds, getJamData } from '../../lib/jams'
-import markdownToHtml from '../../lib/markdownToHtml'
+import { Jam } from '../../../domain/types/jam.interface';
+import { getAllJamIds, getJamData } from '../../../lib/jams'
+import markdownToHtml from '../../../lib/markdownToHtml'
 
 interface JamPageParams {
-  params: {id: string}
+  id: string,
+  year: string
 }
 
-export async function getStaticProps({ params }: JamPageParams) {
-  const jamData = getJamData(params.id)
-
+export async function getStaticProps(context: {params: JamPageParams}) {
+  const jamData = getJamData(context.params.id, context.params.year)
   const getHtmlContent = async () => {
     return await markdownToHtml(jamData.contentMd || '');
   }

@@ -1,21 +1,17 @@
 import format from "date-fns/format";
-import { GetStaticProps } from "next"
+import { GetServerSideProps } from "next"
 import Link from "next/link"
-import { useRouter } from "next/router";
 import { Jam } from "../domain/types/jam.interface";
-import { getSortedJamsData } from "../lib/jams"
+import { getJamsByYearPosted } from "../lib/jams"
 
 export default function WeeklyJams({
-  allJamsData,
-  yearsOfPosts
+  jamsData,
+  selectedYear
 }: {
-  allJamsData: Jam[],
-  yearsOfPosts: number[]
+  jamsData: Jam[],
+  selectedYear: number,
 }) {
-  const router = useRouter()
-  const currentYear = new Date().getFullYear();
-  const selectedYear = router.query?.year ?? currentYear;
-  const jamsFilteredByYear =  allJamsData.filter(jam => jam.yearPosted === Number(selectedYear))
+  const yearsOfPosts = [2022, 2023]
 
   return (
     <>
@@ -23,11 +19,11 @@ export default function WeeklyJams({
       <p className="mb-0">Short blog posts about the music that intersects with my life over the course of each week. Updated most weekends.</p>
       <p><a href="https://open.spotify.com/playlist/5BWFJGx0U1a93zP5dWj3Zn?si=d08b42e4b99d4f65" target="_blank" rel="noopener noreferrer">Follow the playlist on Spotify</a></p>
       <div className="my-3">
-        {jamsFilteredByYear?.map(({ id, date, title, artist, releaseYear }) => (
+        {jamsData?.map(({ id, date, title, artist, releaseYear, yearPosted }) => (
           <div className="grid grid-cols-3 max-w-lg sm:grid-cols-5" key={id}>
             <p className="mb-0 col-span-1">{format(new Date(date), "MMM dd, yyyy")}</p>
             <div className="flex flex-wrap w-auto col-span-2 sm:col-span-4">
-            <Link href={`/jams/${id}`}>
+            <Link href={`/jams/${yearPosted}/${id}`}>
               <a>{title} by {artist} ({releaseYear})</a>
             </Link>
             </div>
@@ -46,18 +42,13 @@ export default function WeeklyJams({
   )
 }
 
-export const getStaticProps: GetStaticProps = async () =>{
-  const allJamsData = getSortedJamsData()
-  let yearsOfPosts: number[] = [];
-  allJamsData.forEach((jam) => {
-    if (!yearsOfPosts.includes(jam.yearPosted)) {
-      yearsOfPosts.push(jam.yearPosted);
-    }
-  })
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const selectedYear = Number(context.query?.year) || new Date().getFullYear();
+  const jamsData = getJamsByYearPosted(selectedYear);
   return {
     props: {
-      allJamsData,
-      yearsOfPosts
+      jamsData,
+      selectedYear
     }
   }
 }
