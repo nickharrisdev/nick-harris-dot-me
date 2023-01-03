@@ -7,15 +7,25 @@ import { getJamsByYearPosted, yearsOfPosts } from "../lib/jams"
 export default function WeeklyJams({
   jamsData,
   selectedYear,
-  years
+  years,
+  yearSetViaQueryString
 }: {
   jamsData: Jam[],
   selectedYear: number,
-  years: string[]
+  years: string[],
+  yearSetViaQueryString: boolean;
 }) {
+  const showSelectedYear = yearSetViaQueryString && selectedYear !== new Date().getFullYear();
   return (
     <>
-      <h2 className="mt-3">Weekly Jams</h2>
+      <h2 className="mt-3">
+        Weekly Jams 
+        {showSelectedYear &&
+          <>
+            &nbsp;({selectedYear})
+          </>
+        }
+      </h2>
       <p className="mb-0">Short blog posts about the music that intersects with my life over the course of each week. Updated most weekends.</p>
       <p><a href="https://open.spotify.com/playlist/5BWFJGx0U1a93zP5dWj3Zn?si=d08b42e4b99d4f65" target="_blank" rel="noopener noreferrer">Follow the playlist on Spotify</a></p>
       <div className="my-3">
@@ -50,7 +60,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     props: {
       jamsData,
       selectedYear,
-      years
+      years,
+      yearSetViaQueryString: !!context.query?.year,
     }
   }
 }
