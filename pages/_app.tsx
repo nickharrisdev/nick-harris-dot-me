@@ -3,8 +3,11 @@ import '../styles/custom-properties.css'
 import type { AppProps } from 'next/app'
 import Layout from '../components/layout'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+  const layoutIsEmpty = ['/links'].includes(router.pathname);
   return (
     <>
       <Head>
@@ -26,9 +29,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       </script>
       </Head>
       <div className="container">
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+        { !layoutIsEmpty && 
+          <Layout>
+              <Component {...pageProps} />
+          </Layout>
+        } 
+        { layoutIsEmpty && 
+          <Component {...pageProps} />
+        } 
       </div>
     </>
   )
