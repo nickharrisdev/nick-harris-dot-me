@@ -9,7 +9,7 @@ export default function Links() {
     {label: "Songwriting Club Holiday Comp 2022", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2022", emoji: "🎧"},
     {label: "Latest ricky single", href:"https://rickymirage.bandcamp.com/album/degeneration-b-w-doomsday-clock", emoji: "🎧"},
     {label: "Shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
-    {label: "Personal website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"}, 
+    {label: "Website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"}, 
   ]
 
   return (  
