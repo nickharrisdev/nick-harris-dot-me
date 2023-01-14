@@ -16,8 +16,8 @@ export default function Links() {
    <>
     <div className="flex flex-col items-center">
       <img src="/me.jpeg" alt="A picture of Nick Harris in a red hat." width="115" height="115" className="shadow-md rounded-full my-4"/>
-      <h4>Nick Harris</h4>
-      <p className="text-xs">Software engineer | Musician</p>
+      <h4>I am Nick Harris</h4>
+      <p className="text-xs">These are my very important links</p>
     </div>
     <div className="flex flex-col items-center mt-2">
       {linksData.map(({label, href, emoji}, index) => {
