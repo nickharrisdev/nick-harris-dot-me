@@ -5,8 +5,8 @@ export default function Navbar() {
 
   React.useEffect(() => {
     window.addEventListener('click', (event) => {
-      // @ts-ignore
-      if (!event.target?.matches('.dropbtn')) {
+      const targetEl = event.target as HTMLElement
+      if (!targetEl?.matches('.dropbtn')) {
         const dropdowns = document.getElementsByClassName("dropdown-content");
         let i;
         for (i = 0; i < dropdowns.length; i++) {

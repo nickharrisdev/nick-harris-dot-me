@@ -72,7 +72,6 @@ export default function JamDetails({jamData, htmlContent}: JamPageProps) {
       {jamData.moresongs && 
         <>
           <h4 className="mt-3">Some more jams</h4>
-        {/* @ts-ignore */}  
          {jamData.moresongs.map(({title, artist, link, description, year}, index)=> {
            return(
              <div key={index}>

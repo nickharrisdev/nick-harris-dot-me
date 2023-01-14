@@ -1,5 +1,6 @@
 import { HttpClient } from "../../data-access/http-client";
 import { ArtistIds } from "../types/artistIds.enum";
+import { DiscogsArtistDetails, DiscogsReleasesResponse } from "../types/discogs.interface";
 
 const httpClient = new HttpClient();
 
@@ -11,15 +12,16 @@ const headers = {
 export class DiscogService {
   async getDiscogData(url: string) {
     const artistReleaseData = await Promise.all(Object.values(ArtistIds).map(async (artistId) => {
-      const releases = await httpClient.get(`${url}artists/${artistId}/releases?sort=year&sort_order=desc`, headers);
-      const artistDetails = await httpClient.get(`${url}artists/${artistId}`, headers)
-      // @ts-ignore
+      const releases = await httpClient.get(`${url}artists/${artistId}/releases?sort=year&sort_order=desc`, headers) as unknown as DiscogsReleasesResponse;
+
+      const artistDetails = await httpClient.get(`${url}artists/${artistId}`, headers) as unknown as DiscogsArtistDetails[];
+
       return { artistDetails, releases: releases.releases }
     }))
     return artistReleaseData;
   }
 
-  buildDiscogsHref = (id?: string, artistName?: string, title?: string) => {
+  buildDiscogsHref = (id?: number, artistName?: string, title?: string) => {
     const baseUrl = "https://www.discogs.com/release/"
     const path = `${id}-${artistName?.replaceAll(" ", "-")}-${title?.replaceAll(" ", "-").replaceAll("'", "")}`
     return `${baseUrl}${path}`

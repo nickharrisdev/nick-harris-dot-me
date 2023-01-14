@@ -5,8 +5,8 @@ export default function ThemeToggle() {
   let dropdown: Element | null;
 
   const switchTheme = (e: Event) => {
-    // @ts-ignore
-    if (e.target.checked) {
+    const checkbox = e.target as HTMLInputElement
+    if (checkbox?.checked) {
       document.documentElement.classList.add("dark");
       dropdown?.classList.add("dark-mode")
     }
