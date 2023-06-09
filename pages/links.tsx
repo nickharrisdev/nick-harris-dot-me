@@ -6,6 +6,7 @@ export default function Links() {
     document.documentElement.classList.add("dark");
   })
   const linksData = [
+    {label: "Mooner at Golden Dagger 6/15/23", href: "https://bit.ly/3qrLDdM", emoji: "🤘🏻"},
     {label: "Songwriting Club Holiday Comp 2022", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2022", emoji: "🎧"},
     {label: "Latest ricky single", href:"https://rickymirage.bandcamp.com/album/degeneration-b-w-doomsday-clock", emoji: "🎧"},
     {label: "Shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
