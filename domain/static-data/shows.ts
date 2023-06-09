@@ -7,6 +7,7 @@ import { Show } from "../types/show.interface";
 // Add notes: {emoji: ""} to link to show notes
 
 const shows: Show[] = [
+  { city: "Chicago, IL", venue: "Golden Dagger", group: Groups.MOONER, date: new Date("06/15/2023"), link: "https://bit.ly/3qrLDdM" },
   { city: "Chicago, IL", venue: "Burlington", group: Groups.SteveSlagg, date: new Date("02/23/2023"), link: "http://www.theburlingtonbar.com/" }, { city: "Chicago, IL", venue: "Burlington", group: Groups.YMIAH, date: new Date("11/11/2022"), link: "http://www.theburlingtonbar.com/" },
   { city: "Chicago, IL", venue: "A friend's wedding", group: Groups.MOONER, date: new Date("06/25/2022"), link: "https://en.wikipedia.org/wiki/Wedding" },
   { city: "Chicago, IL", venue: "Porchfest", group: Groups.MOONER, date: new Date("08/21/2022"), link: "https://www.lakeviewroscoevillage.org/community-events/porchfest-lakeview-1-h7gbg", notes: { emoji: "🌳🐈🏍" } },
