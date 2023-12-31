@@ -7,7 +7,7 @@ export default function Links() {
   })
   const linksData = [
     {label: "YMIAH @ Schuba's 1/6/2024", href: "https://lh-st.com/shows/01-06-2024-the-vulgar-boatmen/" , emoji: "🥁"},
-    {label: "YMIAH NEW release)", href:"https://youngmaninahurry.bandcamp.com/album/actor-brought-a-vice", emoji: "💿"},
+    {label: "YMIAH NEW release", href:"https://youngmaninahurry.bandcamp.com/album/actor-brought-a-vice", emoji: "💿"},
     {label: "Website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"}, 
     {label: "More shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
   ]
