@@ -6,11 +6,16 @@ export default function Links() {
     document.documentElement.classList.add("dark");
   })
   const linksData = [
+    {label: "YMIAH @ Schuba's 1/6/2024", href: "https://lh-st.com/shows/01-06-2024-the-vulgar-boatmen/" , emoji: "🥁"},
     {label: "Website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"}, 
-    {label: "Songwriting Club Holiday Comp 2022", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2022", emoji: "🎧"},
-    {label: "Latest ricky single", href:"https://rickymirage.bandcamp.com/album/degeneration-b-w-doomsday-clock", emoji: "🎧"},
-    {label: "Shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
+    {label: "More shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
   ]
+
+  /**
+   * Old
+   *     {label: "Songwriting Club Holiday Comp 2022", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2022", emoji: "🎧"},
+    {label: "Latest ricky single", href:"https://rickymirage.bandcamp.com/album/degeneration-b-w-doomsday-clock", emoji: "🎧"},
+   */
 
   return (  
    <>
