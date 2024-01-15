@@ -14,8 +14,16 @@ export const yearsOfPosts = getDirectories(jamsDirectory);
 
 export function getJamsByYearPosted(year: number) {
   const postedYearDirectory = path.join(process.cwd(), `jams/${year}`);
+
+  const dirExists = fs.existsSync(postedYearDirectory)
+
+  if (!dirExists) {
+    return []
+  }
+
   // Get file names under /jams
   const fileNames = fs.readdirSync(postedYearDirectory)
+
   const jamDataFromGivenYear = fileNames.map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
