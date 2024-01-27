@@ -9,7 +9,7 @@ weather: "Plentiful sunshine. Very cold. High 18F. Winds WNW at 10 to 15 mph."
 moresongs:
   - title: "Sadness as a Gift"
     artist: "Adrianne Lenker"
-    year: "2019"
+    year: "2024"
     link: "https://www.youtube.com/watch?v=GmycsQ30obg"
     description: "Adrianne Lenker may be my favorite contemporary songwriter. She has a new album coming out soon."
   - title: "Sirius"
