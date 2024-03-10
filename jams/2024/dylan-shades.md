@@ -1,6 +1,6 @@
 ---
-title: "Aaron Lee Tasjan"
-artist: "Dylan Shades"
+title: "Dylan Shades"
+artist: "Aaron Lee Tasjan"
 releaseYear: "2024"
 date: "03/09/2024"
 youtubeLink: "https://www.youtube.com/embed/aDZ1Rnp4w3U?si=K-1enXM6R_aGfRjK"
