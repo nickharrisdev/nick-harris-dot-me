@@ -7,6 +7,8 @@ import { Show } from "../types/show.interface";
 // Add notes: {emoji: ""} to link to show notes
 
 const shows: Show[] = [
+  { city: "Chicago, IL", venue: "Color Club - PRF BBQ", group: Groups.MOONER, date: new Date("07/18/2024"), link: "https://prfbbq.com/" },
+  { city: "Chicago, IL", venue: "Pylon in the Chicago River Near Belmont bridge", group: Groups.SteveSlagg, date: new Date("07/07/2024"), link: "https://blockclubchicago.org/2023/11/09/chicagos-hottest-music-venue-is-a-concrete-pillar-in-the-chicago-river/" },
   { city: "Chicago, IL", venue: "Fallen Log", group: Groups.LK, date: new Date("06/01/2024"), link: "https://kitchen17.com/events/" },
   { city: "Chicago, IL", venue: "Sleeping Village", group: Groups.MOONER, date: new Date("04/26/2024"), link: "https://sleeping-village.com/events/" },
   { city: "Chicago, IL", venue: "Schuba's", group: Groups.YMIAH, date: new Date("01/06/2024"), link: "https://lh-st.com/shows/01-06-2024-the-vulgar-boatmen/" },
