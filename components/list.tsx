@@ -58,7 +58,7 @@ export default function List(props: {list?: Show[] | DiscogsRelease[], type?: st
             </div>
           )
         }) : "No upcoming shows."}
-        <h3 className="mt-4">Previous</h3>
+        <h3 className="mt-4">Previous (since 2022)</h3>
         {sortedPastShows?.map(({venue, group, date, link, city, notes}, index) => {
           const showId = getShowId(date);
           return (
