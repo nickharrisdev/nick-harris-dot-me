@@ -6,8 +6,8 @@ export default function Links() {
     document.documentElement.classList.add("dark");
   })
   const linksData = [
-    {label: "YMIAH @ Schuba's 1/6/2024", href: "https://lh-st.com/shows/01-06-2024-the-vulgar-boatmen/" , emoji: "🥁"},
-    {label: "YMIAH NEW release", href:"https://youngmaninahurry.bandcamp.com/album/actor-brought-a-vice", emoji: "💿"},
+    {label: "Lee Ketch @ Constellation", href: "https://www.seetickets.us/event/daniel-knox-with-lee-ketch/625413" , emoji: "🥁"},
+    {label: "Songwriting Club Holiday Comp 2024", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2024", emoji: "🎧"},
     {label: "Website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"}, 
     {label: "More shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
   ]
