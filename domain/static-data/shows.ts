@@ -7,6 +7,14 @@ import { Show } from "../types/show.interface";
 // Add notes: {emoji: ""} to link to show notes
 
 const shows: Show[] = [
+  {
+    city: "Chicago, IL",
+    venue: "Constellation",
+    group: Groups.LK,
+    date: new Date("01/09/2025"),
+    link: "https://www.seetickets.us/event/daniel-knox-with-lee-ketch/625413"
+  },
+  { city: "Chicago, IL", venue: "Contorno", group: Groups.Contorno, date: new Date("01/05/2025"), link: "https://tonedeafrecs.com/" },
   { city: "Chicago, IL", venue: "California Clipper", group: Groups.SteveSlagg, date: new Date("11/16/2024"), link: "https://californiaclipper.com/" },
   { city: "Chicago, IL", venue: "The Hideout", group: Groups.LK, date: new Date("09/26/2024"), link: "https://hideoutchicago.com/events/?rhp_paged=1&rhp_event_display=list&view=list&rhp_bar_rhp_gen=0&rhp_bar_rhp_venue=0&rhp_bar_rhp_month=09" },
   { city: "Chicago, IL", venue: "Voice (R)evolution", group: Groups.SteveSlagg, date: new Date("09/21/2024"), link: "https://www.voicerevolution.com/services" },
