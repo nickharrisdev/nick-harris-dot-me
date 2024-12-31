@@ -6,7 +6,8 @@ export default function Links() {
     document.documentElement.classList.add("dark");
   })
   const linksData = [
-    {label: "Lee Ketch @ Constellation", href: "https://www.seetickets.us/event/daniel-knox-with-lee-ketch/625413" , emoji: "🥁"},
+    {label: "With Arms Wide Open Cover feat. Grace Kuhl", href: "https://soundcloud.com/my-friend-nick/with-arms-wide-open-creed-cover-feat-grace-kuhl" , emoji: "🎤"},
+    {label: "Lee Ketch @ Constellation 1/9/2025", href: "https://www.seetickets.us/event/daniel-knox-with-lee-ketch/625413" , emoji: "🥁"},
     {label: "Songwriting Club Holiday Comp 2024", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2024", emoji: "🎧"},
     {label: "Website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"}, 
     {label: "More shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
