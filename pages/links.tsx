@@ -7,6 +7,7 @@ export default function Links() {
   })
   const linksData = [
     {label: "Three Little Birds Cover", href: "https://soundcloud.com/my-friend-nick/three-little-birds-bob-marley-cover", emoji: "🕊️"},
+    {label: "New YMIAH Single - Looking For Life (In All The Wrong Places)", href: "https://www.youtube.com/watch?v=qI57SiRu20g&list=OLAK5uy_nl_PZqioTq6AbOHX21NIozuuXBH2NVpUs", emoji: "🎹"},
     {label: "Lee Ketch @ Hungry Brain 3/21/2025", href: "https://hungrybrainchicago.com/seetickets-event/lee-ketch-and-ryan-donlin/" , emoji: "🥁"},
     {label: "With Arms Wide Open Cover feat. Grace Kuhl", href: "https://soundcloud.com/my-friend-nick/with-arms-wide-open-creed-cover-feat-grace-kuhl" , emoji: "🎤"},
     {label: "Songwriting Club Holiday Comp 2024", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2024", emoji: "🎧"},
