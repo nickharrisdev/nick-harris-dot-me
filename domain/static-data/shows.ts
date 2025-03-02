@@ -9,6 +9,13 @@ import { Show } from "../types/show.interface";
 const shows: Show[] = [
   {
     city: "Chicago, IL",
+    venue: "Hungry Brain",
+    group: Groups.LK,
+    date: new Date("03/21/2025"),
+    link: "https://hungrybrainchicago.com/seetickets-event/lee-ketch-and-ryan-donlin/"
+  },
+  {
+    city: "Chicago, IL",
     venue: "Constellation",
     group: Groups.LK,
     date: new Date("01/09/2025"),

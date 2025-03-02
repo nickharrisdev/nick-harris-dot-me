@@ -6,8 +6,9 @@ export default function Links() {
     document.documentElement.classList.add("dark");
   })
   const linksData = [
+    {label: "Three Little Birds Cover", href: "https://soundcloud.com/my-friend-nick/three-little-birds-bob-marley-cover", emoji: "🕊️"},
+    {label: "Lee Ketch @ Hungry Brain 3/21/2025", href: "https://hungrybrainchicago.com/seetickets-event/lee-ketch-and-ryan-donlin/" , emoji: "🥁"},
     {label: "With Arms Wide Open Cover feat. Grace Kuhl", href: "https://soundcloud.com/my-friend-nick/with-arms-wide-open-creed-cover-feat-grace-kuhl" , emoji: "🎤"},
-    {label: "Lee Ketch @ Constellation 1/9/2025", href: "https://www.seetickets.us/event/daniel-knox-with-lee-ketch/625413" , emoji: "🥁"},
     {label: "Songwriting Club Holiday Comp 2024", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2024", emoji: "🎧"},
     {label: "Website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"}, 
     {label: "More shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
