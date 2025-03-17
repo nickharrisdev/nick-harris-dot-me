@@ -39,9 +39,9 @@ export default function Navbar() {
             <Link href="/discography">
               <a className="pl-1 py-1">Discography</a>  
             </Link>
-            <Link href="/weekly-jams">
+            {/* <Link href="/weekly-jams">
               <a className="pl-1 py-1">Weekly Jams</a>  
-            </Link>
+            </Link> */}
             <Link href="/shows">
               <a className="pl-1 py-1">Shows</a>  
             </Link>
