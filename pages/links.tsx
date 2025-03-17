@@ -6,6 +6,7 @@ export default function Links() {
     document.documentElement.classList.add("dark");
   })
   const linksData = [
+    {label: "New YMIAH album! PAY ATTENTION PAY ATTENTION", href: "https://youngmaninahurry.bandcamp.com/album/pay-attention-pay-attention", emoji: "💿"},
     {label: "Three Little Birds Cover", href: "https://soundcloud.com/my-friend-nick/three-little-birds-bob-marley-cover", emoji: "🕊️"},
     {label: "New YMIAH Single - Looking For Life (In All The Wrong Places)", href: "https://www.youtube.com/watch?v=qI57SiRu20g&list=OLAK5uy_nl_PZqioTq6AbOHX21NIozuuXBH2NVpUs", emoji: "🎹"},
     {label: "Lee Ketch @ Hungry Brain 3/21/2025", href: "https://hungrybrainchicago.com/seetickets-event/lee-ketch-and-ryan-donlin/" , emoji: "🥁"},
