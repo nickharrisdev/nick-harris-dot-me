@@ -9,6 +9,34 @@ import { Show } from "../types/show.interface";
 const shows: Show[] = [
   {
     city: "Chicago, IL",
+    venue: "Constellation",
+    group: Groups.MOONER,
+    date: new Date("05/15/2025"),
+    link: "https://wl.seetickets.us/event/dpcd-and-mooner/642974?afflky=ConstellationChicago"
+  },
+  {
+    city: "Milwaukee, WI",
+    venue: "Linneman's Riverwest Inn",
+    group: Groups.LK,
+    date: new Date("05/09/2025"),
+    link: "https://linnemans.com/event/caley-conway-w-lee-ketch-matthu-may-9-2025/"
+  },
+  {
+    city: "Chicago, IL",
+    venue: "Color Club",
+    group: Groups.LK,
+    date: new Date("05/08/2025"),
+    link: "https://dice.fm/event/v3my26-caley-conway-lee-ketch-ben-mcfadden-8th-may-color-club-chicago-tickets?pid=d285d692&_branch_match_id=1283916922601128083&utm_medium=partners_api&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1fc1TzU3N0s1tExLSbQvyEyxTTGyME0xszRSqytKTUstKsrMS49PKsovL04tsnXOKMrPTQUA5YUdIEgAAAA%3D"
+  },
+  {
+    city: "Chicago, IL",
+    venue: "Montrose Saloon",
+    group: Groups.SteveSlagg,
+    date: new Date("05/01/2025"),
+    link: "https://montrosesaloon.com/event/international-pop-overthrow-day-seven/"
+  },
+  {
+    city: "Chicago, IL",
     venue: "Hungry Brain",
     group: Groups.LK,
     date: new Date("03/21/2025"),
