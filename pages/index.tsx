@@ -14,7 +14,7 @@ export default function Home({
         I&apos;m a product-minded software engineer who believes the most important part of software is the people — both those who build it and those who use it. I see software as a medium for communicating intentions, reflecting human relationships, and solving real-world problems with empathy and purpose. Technology excites me most when it&apos;s used effectively to meet meaningful needs and bring people closer together.
       </p>
       <p> 
-       Specializing in front-end development, I create user interfaces that are beautiful, accessible, intuitive, and performant — for users — and reusable, extensible, and maintainable — for developers. I care deeply about building thoughtful tools that last, empower, and inspire.
+       Specializing in front-end development, I create user interfaces that are beautiful, accessible, intuitive, and performant for users and reusable, extensible, and maintainable for developers. I care deeply about building thoughtful tools that last, empower, and inspire.
       </p>
       <p> 
         When not making stuff on the internet, I can usually be found playing music with <a href="https://moonerband.com/" target="_blank" rel="noopener noreferrer"> Mooner</a>, <a href="https://youngmaninahurry.com" target="_blank" rel="noopener noreferrer">Young Man in a Hurry</a>, or attending a local show. 
