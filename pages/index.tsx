@@ -2,12 +2,6 @@ import type { GetStaticProps } from 'next'
 import { getSortedProjectsData } from '../lib/projects'
 import { Projects } from '../domain/types/projects.interface'
 
-/**
- * I'm a product-minded software engineer who believes the most important part of software is the people — both those who build it and those who use it. I see software as a medium for communicating intentions, reflecting human relationships, and solving real-world problems with empathy and purpose. Technology excites me most when it's used effectively to meet meaningful needs and bring people closer together.
-
-Specializing in front-end development, I create user interfaces that are beautiful, accessible, intuitive, and performant — for users — and reusable, extensible, and maintainable — for developers. I care deeply about building thoughtful tools that last, empower, and inspire.
- */
-
 export default function Home({
   allProjectsData
 }: {
