@@ -3,5 +3,6 @@ export enum Groups {
   LK = "Lee Ketch",
   MOONER = "Mooner",
   SteveSlagg = "Steve Slagg",
-  Contorno = "Contorno"
+  Contorno = "Contorno",
+  AnniversaryPartyBand = "Anniversary Party Band"
 }

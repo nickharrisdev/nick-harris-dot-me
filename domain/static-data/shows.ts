@@ -9,6 +9,34 @@ import { Show } from "../types/show.interface";
 const shows: Show[] = [
   {
     city: "Chicago, IL",
+    venue: "The Hideout",
+    group: Groups.SteveSlagg,
+    date: new Date("10/14/2025"),
+    link: "https://hideoutchicago.com/event/steve-slagg-marian-runk-contorno/hideout-chicago/chicago/"
+  },
+  {
+    city: "Chicago, IL",
+    venue: "Judson and Moore Distillery",
+    group: Groups.YMIAH,
+    date: new Date("10/23/2025"),
+    link: "https://dice.fm/venue/judson--moore-distillery-odrg"
+  },
+  {
+    city: "Chicago, IL",
+    venue: "The Hideout",
+    group: Groups.LK,
+    date: new Date("09/24/2025"),
+    link: "https://hideoutchicago.com/event/do-the-needful-with-lee-ketch/hideout-chicago/chicago/"
+  },
+  {
+    city: "Chicago, IL",
+    venue: "Le Loft",
+    group: Groups.AnniversaryPartyBand,
+    date: new Date("08/16/2025"),
+    link: ""
+  },
+  {
+    city: "Chicago, IL",
     venue: "Cafe Mustache",
     group: Groups.SteveSlagg,
     date: new Date("08/26/2025"),
