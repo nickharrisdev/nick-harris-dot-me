@@ -6,20 +6,27 @@ export default function Links() {
     document.documentElement.classList.add("dark");
   })
   const linksData = [
-    {label: "New YMIAH album! PAY ATTENTION PAY ATTENTION", href: "https://youngmaninahurry.bandcamp.com/album/pay-attention-pay-attention", emoji: "💿"},
-    {label: "Three Little Birds Cover", href: "https://soundcloud.com/my-friend-nick/three-little-birds-bob-marley-cover", emoji: "🕊️"},
-    {label: "New YMIAH Single - Looking For Life (In All The Wrong Places)", href: "https://www.youtube.com/watch?v=qI57SiRu20g&list=OLAK5uy_nl_PZqioTq6AbOHX21NIozuuXBH2NVpUs", emoji: "🎹"},
-    {label: "Lee Ketch @ Hungry Brain 3/21/2025", href: "https://hungrybrainchicago.com/seetickets-event/lee-ketch-and-ryan-donlin/" , emoji: "🥁"},
-    {label: "With Arms Wide Open Cover feat. Grace Kuhl", href: "https://soundcloud.com/my-friend-nick/with-arms-wide-open-creed-cover-feat-grace-kuhl" , emoji: "🎤"},
-    {label: "Songwriting Club Holiday Comp 2024", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2024", emoji: "🎧"},
-    {label: "Website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"}, 
-    {label: "More shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
+    {label: "Upcoming shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
+    {label: "Website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"},   
   ]
 
   /**
    * Old
    *     {label: "Songwriting Club Holiday Comp 2022", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2022", emoji: "🎧"},
     {label: "Latest ricky single", href:"https://rickymirage.bandcamp.com/album/degeneration-b-w-doomsday-clock", emoji: "🎧"},
+
+        {label: "New YMIAH Single - Looking For Life (In All The Wrong Places)", href: "https://www.youtube.com/watch?v=qI57SiRu20g&list=OLAK5uy_nl_PZqioTq6AbOHX21NIozuuXBH2NVpUs", emoji: "🎹"},
+
+  {label: "Lee Ketch @ Hungry Brain 3/21/2025", href: "https://hungrybrainchicago.com/seetickets-event/lee-ketch-and-ryan-donlin/" , emoji: "🥁"},
+
+ {label: "Songwriting Club Holiday Comp 2024", href: "https://chisongwritingclub.bandcamp.com/album/holiday-compilation-2024", emoji: "🎧"},
+
+ {label: "With Arms Wide Open Cover feat. Grace Kuhl", href: "https://soundcloud.com/my-friend-nick/with-arms-wide-open-creed-cover-feat-grace-kuhl" , emoji: "🎤"},
+
+ {label: "Three Little Birds Cover", href: "https://soundcloud.com/my-friend-nick/three-little-birds-bob-marley-cover", emoji: "🕊️"},
+
+    {label: "New YMIAH album! PAY ATTENTION PAY ATTENTION", href: "https://youngmaninahurry.bandcamp.com/album/pay-attention-pay-attention", emoji: "💿"},
+
    */
 
   return (  
