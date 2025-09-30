@@ -9,6 +9,13 @@ import { Show } from "../types/show.interface";
 const shows: Show[] = [
   {
     city: "Chicago, IL",
+    venue: "The Green Mill - Paper Machete",
+    group: Groups.LK,
+    date: new Date("09/27/2025"),
+    link: "https://greenmilljazz.com/calendar/"
+  },
+  {
+    city: "Chicago, IL",
     venue: "The Hideout",
     group: Groups.SteveSlagg,
     date: new Date("10/14/2025"),
