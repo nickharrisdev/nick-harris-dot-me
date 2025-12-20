@@ -9,6 +9,20 @@ import { Show } from "../types/show.interface";
 const shows: Show[] = [
   {
     city: "Chicago, IL",
+    venue: "Rattleback Records",
+    group: Groups.YMIAH,
+    date: new Date("12/07/2025"),
+    link: "https://rattlebackrecords.com/events/"
+  },
+  {
+    city: "Chicago, IL",
+    venue: "Burlington Bar",
+    group: Groups.MOONER,
+    date: new Date("12/15/2025"),
+    link: "https://www.theburlingtonbar.com/"
+  },
+  {
+    city: "Chicago, IL",
     venue: "The Green Mill - Paper Machete",
     group: Groups.LK,
     date: new Date("09/27/2025"),
@@ -48,13 +62,6 @@ const shows: Show[] = [
     group: Groups.SteveSlagg,
     date: new Date("08/26/2025"),
     link: "http://www.cafemustache.com/"
-  },
-  {
-    city: "Chicago, IL",
-    venue: "Rattleback Records",
-    group: Groups.LK,
-    date: new Date("08/03/2025"),
-    link: "https://rattlebackrecords.com/events/"
   },
   {
     city: "Chicago, IL",
