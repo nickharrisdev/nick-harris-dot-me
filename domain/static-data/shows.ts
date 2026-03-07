@@ -9,6 +9,13 @@ import { Show } from "../types/show.interface";
 const shows: Show[] = [
   {
     city: "Chicago, IL",
+    venue: "Bim Bom Studios",
+    group: Groups.MOONER,
+    date: new Date("03/07/2026"),
+    link: "https://www.bimbomstudios.com/calendar/mooner-sick-day-bad-posture-club-sam-gelband"
+  },
+  {
+    city: "Chicago, IL",
     venue: "Rattleback Records",
     group: Groups.YMIAH,
     date: new Date("12/07/2025"),
