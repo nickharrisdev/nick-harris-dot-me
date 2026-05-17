@@ -14,26 +14,21 @@ export default function List(props: {list?: Show[] | Release[], type?: string, c
       return (
         <>
           <h4 className="mt-1">Credited as {props.creditedAs}</h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-3">
-          {releases?.map(({ title, artist, year, image, links }, index) => {
-            return (
-                <div className="flex flex-col" key={index}>
-                  <span>
-                    <img src={image} alt="Album cover" loading="lazy" className="shadow-md" width="170" height="auto" />
-                    <p className="mb-0 font-bold">{title}</p>
-                  </span>
-                  <p className="mb-0">{artist}</p>
-                  <p className="mb-0">({year})</p>
-                  {links && (
-                    <div className="flex gap-2 mt-1">
-                      {links.bandcamp && <a href={links.bandcamp} target="_blank" rel="noreferrer" title="Bandcamp">🔷</a>}
-                      {links.spotify && <a href={links.spotify} target="_blank" rel="noreferrer" title="Spotify">🟢</a>}
-                      {links.appleMusic && <a href={links.appleMusic} target="_blank" rel="noreferrer" title="Apple Music">🍎</a>}
-                      {links.download && <a href={links.download} target="_blank" rel="noreferrer" title="Free download">🆓</a>}
-                    </div>
-                  )}
+          <div className="mb-4">
+            {releases?.map(({ title, artist, year, links }, index) => (
+              <div className="grid grid-cols-3 max-w-2xl sm:grid-cols-5 mb-0" key={index}>
+                <p className="mb-0 col-span-1 text-sm">{year}</p>
+                <div className="col-span-2 sm:col-span-3">
+                  <p className="mb-0"><strong>{title}</strong> — {artist}</p>
                 </div>
-            )})}
+                <div className="col-span-1 flex gap-2">
+                  {links?.bandcamp && <a href={links.bandcamp} target="_blank" rel="noreferrer" title="Bandcamp">🔷</a>}
+                  {links?.spotify && <a href={links.spotify} target="_blank" rel="noreferrer" title="Spotify">🟢</a>}
+                  {links?.appleMusic && <a href={links.appleMusic} target="_blank" rel="noreferrer" title="Apple Music">🍎</a>}
+                  {links?.download && <a href={links.download} target="_blank" rel="noreferrer" title="Free download">🆓</a>}
+                </div>
+              </div>
+            ))}
           </div>
         </>
      )
