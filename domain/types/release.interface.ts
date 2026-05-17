@@ -4,8 +4,7 @@ export interface Release {
   title: string;
   artist: Groups;
   year: number;
-  coverUrl: string;
-  image?: string;
+  image: string;
   format?: string;
   label?: string;
   role?: string;
