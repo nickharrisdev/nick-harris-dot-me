@@ -150,6 +150,16 @@ ul li {
   background-color: white !important;
 }
 
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dark dialog {
+  background-color: #1c1c1c;
+  color: white;
+  border: 1px solid #333;
+}
+
 /* custom utils */
 
 .max-w-fit {
