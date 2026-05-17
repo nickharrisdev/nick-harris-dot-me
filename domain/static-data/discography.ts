@@ -33,6 +33,15 @@ export const discography: ArtistDiscography[] = [
         role: "Appearance",
       },
       {
+        title: "🕴 🚬",
+        artist: Groups.YMIAH,
+        year: 2024,
+        coverUrl: "https://f4.bcbits.com/img/a1798001033_10.jpg",
+        format: "2xFile, FLAC, Single",
+        label: "Not On Label (Self-released)",
+        role: "Appearance",
+      },
+      {
         title: "I Don't Want To Get Adjusted To This World",
         artist: Groups.SteveSlagg,
         year: 2024,
