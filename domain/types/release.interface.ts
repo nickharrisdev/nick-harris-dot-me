@@ -1,6 +1,8 @@
+import { Groups } from "./groups.enum";
+
 export interface Release {
   title: string;
-  artist: string;
+  artist: Groups;
   year: number;
   coverUrl: string;
   format?: string;
@@ -10,6 +12,7 @@ export interface Release {
     bandcamp?: string;
     spotify?: string;
     appleMusic?: string;
+    download?: string;
   };
 }
 

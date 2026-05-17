@@ -26,9 +26,10 @@ export default function List(props: {list?: Show[] | Release[], type?: string, c
                   <p className="mb-0">({year})</p>
                   {links && (
                     <div className="flex gap-2 mt-1">
-                      {links.bandcamp && <a href={links.bandcamp} target="_blank" rel="noreferrer" className="text-xs text-gray-500 hover:text-gray-900">bandcamp</a>}
-                      {links.spotify && <a href={links.spotify} target="_blank" rel="noreferrer" className="text-xs text-gray-500 hover:text-gray-900">spotify</a>}
-                      {links.appleMusic && <a href={links.appleMusic} target="_blank" rel="noreferrer" className="text-xs text-gray-500 hover:text-gray-900">apple music</a>}
+                      {links.bandcamp && <a href={links.bandcamp} target="_blank" rel="noreferrer" title="Bandcamp">🔷</a>}
+                      {links.spotify && <a href={links.spotify} target="_blank" rel="noreferrer" title="Spotify">🟢</a>}
+                      {links.appleMusic && <a href={links.appleMusic} target="_blank" rel="noreferrer" title="Apple Music">🍎</a>}
+                      {links.download && <a href={links.download} target="_blank" rel="noreferrer" title="Free download">🆓</a>}
                     </div>
                   )}
                 </div>

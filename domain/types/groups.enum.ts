@@ -4,5 +4,17 @@ export enum Groups {
   MOONER = "Mooner",
   SteveSlagg = "Steve Slagg",
   Contorno = "Contorno",
-  AnniversaryPartyBand = "Anniversary Party Band"
+  AnniversaryPartyBand = "Anniversary Party Band",
+  RickyMirage = "Ricky Mirage",
+  SonsOfTheWest = "Sons of the West",
+  TheKuhls = "The Kuhls",
+  NickHarrisSolo = "Nick Harris",
+  HarlotsProgressPresents = "Harlot's Progress Presents",
+  RodSherwood = "Rod Sherwood",
+  TheObleeks = "The Obleeks",
+  LukeHenry = "Luke Henry",
+  LukeHenryAndTheHunnybears = "Luke Henry & the Hunnybears",
+  Peasantry = "Peasantry",
+  VILΛS = "VILΛS",
+  LukeHenryAndRabbitfoot = "Luke Henry & Rabbitfoot",
 }

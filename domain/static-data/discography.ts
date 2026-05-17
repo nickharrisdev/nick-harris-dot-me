@@ -1,3 +1,4 @@
+import { Groups } from '../types/groups.enum';
 import { ArtistDiscography } from '../types/release.interface';
 
 export const discography: ArtistDiscography[] = [
@@ -6,7 +7,7 @@ export const discography: ArtistDiscography[] = [
     releases: [
       {
         title: "PAPA DOUBLE ALBUM",
-        artist: "Young Man In A Hurry",
+        artist: Groups.YMIAH,
         year: 2025,
         coverUrl: "https://f4.bcbits.com/img/a3881163274_10.jpg",
         format: "2xFile, FLAC, Single",
@@ -15,7 +16,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "La Sagrada Familia b/w I Can't Love You",
-        artist: "Lee Ketch",
+        artist: Groups.LK,
         year: 2025,
         coverUrl: "https://f4.bcbits.com/img/a2981110275_10.jpg",
         format: "2xFile, FLAC, Single",
@@ -24,7 +25,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "PAY ATTENTION PAY ATTENTION",
-        artist: "Young Man In A Hurry",
+        artist: Groups.YMIAH,
         year: 2025,
         coverUrl: "https://f4.bcbits.com/img/a4040546409_10.jpg",
         format: "2xFile, FLAC, Single",
@@ -33,7 +34,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "I Don't Want To Get Adjusted To This World",
-        artist: "Steve Slagg",
+        artist: Groups.SteveSlagg,
         year: 2024,
         coverUrl: "https://i.discogs.com/mfKQJcm04bfTqkJYD_h6Rc_l0H5MfMtvI9GOViuyM_o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNDQ0/ODY1LTE3MjMyNzE3/NTktNzMwMC5qcGVn.jpeg",
         format: "2xFile, FLAC, Single",
@@ -42,7 +43,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Actor Brought a Vice",
-        artist: "Young Man In A Hurry",
+        artist: Groups.YMIAH,
         year: 2023,
         coverUrl: "https://f4.bcbits.com/img/a0090931554_10.jpg",
         format: "2xFile, FLAC, Single",
@@ -51,7 +52,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Other People",
-        artist: "Young Man In A Hurry",
+        artist: Groups.YMIAH,
         year: 2022,
         coverUrl: "https://i.discogs.com/q6yrMrvqEMTj_nKs-0i3T62pVGUTQSQLl0-pTqeE01M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/ODU5LTE2NDUyOTgw/NzktNTI2NC5qcGVn.jpeg",
         format: "File, MP3, Album",
@@ -60,7 +61,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Neé Robert EP",
-        artist: "Young Man In A Hurry",
+        artist: Groups.YMIAH,
         year: 2021,
         coverUrl: "https://i.discogs.com/IcwZ_r7hvE4cWIyTjPpJe1xwrPdAZEmORthZHYDLFRs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/OTk3LTE2NDUyOTg3/MjYtMjM5Ny5qcGVn.jpeg",
         format: "File, MP3, EP",
@@ -69,7 +70,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "God Bless Meyer Horn EP",
-        artist: "Young Man In A Hurry",
+        artist: Groups.YMIAH,
         year: 2021,
         coverUrl: "https://i.discogs.com/iH898ZTR-IZyXxDwh9RRwHe8VC8--WUHjcdgr2_jqSI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI1/MDQ1LTE2NDUyOTkw/MDAtODM0Ny5qcGVn.jpeg",
         format: "File, MP3, EP",
@@ -78,7 +79,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Jarvis",
-        artist: "Young Man In A Hurry",
+        artist: Groups.YMIAH,
         year: 2020,
         coverUrl: "https://i.discogs.com/aKa2SE8vpelBDXZ_s-_WjAfFu9X0WJuPVhlK1vU0Vxk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1MTg5/NDIzLTE1ODc4NTcw/NTUtNTMwMy5qcGVn.jpeg",
         format: "12\", Ltd + File, MP3",
@@ -87,7 +88,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "The Alternate Universe of Love",
-        artist: "Mooner",
+        artist: Groups.MOONER,
         year: 2020,
         coverUrl: "https://i.discogs.com/pMRCs_DJRBGaXdkcg9tb24ySs6UY14eu1klYc3jWiEQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1OTcz/NzQ2LTE2MDExNzU1/NzYtMzMzNy5qcGVn.jpeg",
         format: "File, MP3, Album",
@@ -96,7 +97,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Family Tree",
-        artist: "Harlot's Progress Presents",
+        artist: Groups.HarlotsProgressPresents,
         year: 2020,
         coverUrl: "https://i.discogs.com/WFTUVjhK-VOAJtqWi9XehznFwA9T7EWa_9LOfSvC76o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4NzM5/MTYyLTE2MjEwODk3/NzItNjk1NS5qcGVn.jpeg",
         format: "File, FLAC, Single",
@@ -105,7 +106,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Heavenly Spring",
-        artist: "Young Man In A Hurry",
+        artist: Groups.YMIAH,
         year: 2020,
         coverUrl: "https://i.discogs.com/GtzAkTZyQ4ED528gztMAWBmurTP6pPBz_3TN0TIbpwI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI1/MDkwLTE2NDUyOTky/ODMtOTQxMi5qcGVn.jpeg",
         format: "File, MP3, EP",
@@ -114,7 +115,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Laughing in My Sleep",
-        artist: "Rod Sherwood",
+        artist: Groups.RodSherwood,
         year: 2019,
         coverUrl: "https://i.discogs.com/LoOUhGkCDKY-J-j9aq2Y81ndD0KP8iZATyGn9WUm82A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/MDg4LTE2NDUyOTQz/MjYtMzg4Ny5wbmc.jpeg",
         format: "File, MP3, Album",
@@ -123,7 +124,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "The Obleeks Live at VCR Chicago",
-        artist: "The Obleeks",
+        artist: Groups.TheObleeks,
         year: 2018,
         coverUrl: "https://i.discogs.com/oLYGlXrKYw0UcFkO634_TDd0ePoV2uHrUT5sKp6yBOk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjIz/OTE3LTE2NDUyOTM2/ODMtMzEwNS5qcGVn.jpeg",
         format: "File, MP3, Album",
@@ -132,14 +133,14 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Satisfaction-promise",
-        artist: "Mooner",
+        artist: Groups.MOONER,
         year: 2018,
         coverUrl: "https://i.discogs.com/vV4DHbUe0sQ0ttw1QNkqn1WIIeJUA46ojzRrGCzHMfw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1Njk4/OTI2LTE1OTYxMzEz/NjEtNzMyOS5qcGVn.jpeg",
         role: "Appearance",
       },
       {
         title: "The Obleeks",
-        artist: "The Obleeks",
+        artist: Groups.TheObleeks,
         year: 2017,
         coverUrl: "https://i.discogs.com/k5xaETcTUYrjRS8f7x7mVKZo6IWAUMQy2cvZ2cHChRw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDAy/MTEzLTE1MDgwMTA4/NDUtNTUyNy5qcGVn.jpeg",
         format: "LP, Album",
@@ -148,7 +149,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Potential",
-        artist: "Peasantry",
+        artist: Groups.Peasantry,
         year: 2017,
         coverUrl: "https://i.discogs.com/lu3xSEDUQnaQEO0pQse2HsphoPFt_WT6aXnyZ3kfI1A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjIy/NjkzLTE2NDUyODg1/OTAtNjY3OS5qcGVn.jpeg",
         format: "File, MP3, MiniAlbum, EP",
@@ -157,7 +158,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "& Hunnybear Vol. I",
-        artist: "Luke Henry",
+        artist: Groups.LukeHenry,
         year: 2017,
         coverUrl: "https://i.discogs.com/R4FrO9HIo8PFHXmklMZ9ICoFEm4EU54N5A4rlYNckCE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI1/MjA3LTE2NDUyOTk3/NTQtMzY3My5qcGVn.jpeg",
         format: "File, MP3, MiniAlbum, EP",
@@ -166,7 +167,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Hiatus EP",
-        artist: "The Kuhls",
+        artist: Groups.TheKuhls,
         year: 2016,
         coverUrl: "https://i.discogs.com/SEicg9e4QDQYzkJV_RMEw-d80Palrh-9ZYL1qZx2Gls/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjIz/NDc2LTE2NDUyOTE3/ODYtMjU2MS5wbmc.jpeg",
         format: "File, MP3, EP",
@@ -175,7 +176,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: " Cleaning Out My Head // Movies",
-        artist: "Luke Henry",
+        artist: Groups.LukeHenry,
         year: 2016,
         coverUrl: "https://i.discogs.com/9OZRyvItnA_aQsQZ1-OvBaPs5KqSZ8MnutHCPJ_lRCk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI1/Mjc5LTE2NDUzMDAx/NjItODQ3MC5qcGVn.jpeg",
         format: "File, MP3, Single",
@@ -184,7 +185,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Fire and Ice EP",
-        artist: "VILΛS",
+        artist: Groups.VILΛS,
         year: 2016,
         coverUrl: "https://i.discogs.com/OYzCl7suuz7KyVEDcCVm1WOk1DNgNnD1hN1lGOoaDpg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI1/MzM2LTE2NDUzMDA0/MzgtNjM0Ny5qcGVn.jpeg",
         format: "File, MP3, EP",
@@ -193,7 +194,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "American Dreams",
-        artist: "Luke Henry & Rabbitfoot",
+        artist: Groups.LukeHenryAndRabbitfoot,
         year: 2015,
         coverUrl: "https://i.discogs.com/9pA1dJxPhFTtNtE4fqPCgNOYwn8jk3q6YVunt2WbxS8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMzg5/ODkyLTE1MzQyODA1/OTQtNjU4MS5qcGVn.jpeg",
         format: "LP, Album, S/Edition, Ear",
@@ -202,7 +203,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Peasanté",
-        artist: "Peasantry",
+        artist: Groups.Peasantry,
         year: 2015,
         coverUrl: "https://i.discogs.com/P2Nb7irzJo4X469c2BoXLh4jT48Sjk2iFwUe9bRH_mI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMTM0/NjcwLTE2NDQ3MDM4/NjItNTIwMS5qcGVn.jpeg",
         format: "Cass + File, MP3",
@@ -211,7 +212,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "In Love / With Love",
-        artist: "Sons of the West",
+        artist: Groups.SonsOfTheWest,
         year: 2015,
         coverUrl: "https://i.discogs.com/Fsvf5bkkPgPFeuk9b91TM5zKd8YctreDVbtSo-sXXXw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMTM1/MDU0LTE2NDQ3MDU3/NjEtNDcyNy5qcGVn.jpeg",
         format: "Cass + File, MP3",
@@ -220,7 +221,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "One in a Million",
-        artist: "The Obleeks",
+        artist: Groups.TheObleeks,
         year: 2015,
         coverUrl: "https://i.discogs.com/1wZOeGxzyZVlvW7EVSiyVWScWNYIkKjt_7K-swhbHyM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjIz/ODMwLTE2NDUyOTMz/MjQtNDY2OC5qcGVn.jpeg",
         format: "File, MP3, EP",
@@ -229,7 +230,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Palace",
-        artist: "Peasantry",
+        artist: Groups.Peasantry,
         year: 2014,
         coverUrl: "https://i.discogs.com/yqB21WTIBWzcwZmB1kkQORiX-GAXGvU54r37LWa56wo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjIy/OTMwLTE2NDUyODk1/NjQtMzIzMi5qcGVn.jpeg",
         format: "File, MP3, EP",
@@ -238,7 +239,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: " I Will Never Be Your Friend (A Shot in the Back)",
-        artist: "Sons of the West",
+        artist: Groups.SonsOfTheWest,
         year: 2012,
         coverUrl: "https://i.discogs.com/zjIHZ-95UUfAqlVPJLxu_-3CBFzRqBdlOT970asuNMY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMTM1/MjE5LTE2NDQ3MDY2/NjItNjU3OS5qcGVn.jpeg",
         format: "File, MP3",
@@ -247,7 +248,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "Sons of the West",
-        artist: "Sons of the West",
+        artist: Groups.SonsOfTheWest,
         year: 2010,
         coverUrl: "https://i.discogs.com/YWKy6ne-3dUwIlWMjk5szu3DVq5fJPF0s5LZsIWhWl4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMTM1/MzA2LTE2NDQ3MDcx/NDctODE3MS5qcGVn.jpeg",
         format: "9xFile, MP3",
@@ -261,7 +262,7 @@ export const discography: ArtistDiscography[] = [
     releases: [
       {
         title: "Degeneration b​/​w Doomsday Clock",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2022,
         coverUrl: "https://i.discogs.com/xZRAzmyq2BkbLexPT1cdrqPny6oiJ7THb_3jbPKdDR0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI1NjM1/ODQ0LTE2NzI2MTQ5/NjUtMTAxNC5qcGVn.jpeg",
         format: "File, MP3, Single",
@@ -270,7 +271,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "hope and hindsight",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2018,
         coverUrl: "https://i.discogs.com/efSQApYWE1fRajG0UTPzqTw5akofuI4i087dIa7NfzA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/MzczLTE2NDUyOTU2/MjAtMTA0MS5qcGVn.jpeg",
         format: "File, MP3, EP",
@@ -279,7 +280,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "I can't believe it's Christmas",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2017,
         coverUrl: "https://i.discogs.com/yYMsIcxxJAUP0dwXX9TumdJa0-KXIGTpM9P99Wnwxm8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/NDE4LTE2NDUyOTU4/OTktNzIwNS5qcGVn.jpeg",
         format: "File, MP3, Single",
@@ -288,7 +289,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "fistful of metal b​/​w shadow of doubt",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2017,
         coverUrl: "https://i.discogs.com/gTgHsqh6iHWgrnO8a1ZkaF6FBUSNh4hR5cZNqwsuiws/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/NDY2LTE2NDUyOTYx/MDItNzUwOC5qcGVn.jpeg",
         format: "File, MP3, Single",
@@ -297,7 +298,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "manic romantic",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2016,
         coverUrl: "https://i.discogs.com/8GYfcn8ZFzaNZiq727CvOuGjHYgataiaYoPu9gbP9Gg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNTY5/ODI0LTE2NDEwODA0/NjEtOTMzMC5qcGVn.jpeg",
         format: "File, MP3, Album + Cass, Album",
@@ -306,7 +307,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "with love",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2016,
         coverUrl: "https://i.discogs.com/t0uVoTGqbRKhDXTqVCnEYBkbMAi1yU3Wq7cStObzq0Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/NTI2LTE2NDUyOTY0/MTQtNDAxNC5qcGVn.jpeg",
         format: "File, MP3, Single",
@@ -315,7 +316,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "pop goes the sun",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2015,
         coverUrl: "https://i.discogs.com/6yQPdk-u56LJeVFXFIy3qHa6Lze07iPvsucWryMrCsY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/NTU5LTE2NDUyOTY1/OTEtMTIwNC5qcGVn.jpeg",
         format: "File, MP3, Album",
@@ -324,7 +325,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "holiday bonus",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2014,
         coverUrl: "https://i.discogs.com/oDRhtzD_sBY8O7ZSX0hCMskHb5OwIEkGvIgTO9iaAX0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/NjE2LTE2NDUyOTY4/ODMtNjM4NS5qcGVn.jpeg",
         format: "File, MP3, Single",
@@ -333,7 +334,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "night terrors",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2014,
         coverUrl: "https://i.discogs.com/pk9CEOMnnltrL7mZU6GUwgBKQuN2hAcUh4relbtib9Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/NjQ5LTE2NDUyOTcx/MDItNTk0OC5qcGVn.jpeg",
         format: "File, MP3, MiniAlbum",
@@ -342,7 +343,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "do it yourself help book",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2014,
         coverUrl: "https://i.discogs.com/64QzJetMQL-H6sPfRf1Xg-glidBOxKsHH-C5ymcTxAE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/NzEyLTE2NDUyOTcz/OTItNDE2OS5qcGVn.jpeg",
         format: "File, MP3, MiniAlbum, EP",
@@ -351,7 +352,7 @@ export const discography: ArtistDiscography[] = [
       },
       {
         title: "goodnight, morning",
-        artist: "Ricky Mirage",
+        artist: Groups.RickyMirage,
         year: 2014,
         coverUrl: "https://i.discogs.com/YtdMXBWVt4u0rCcLlxqpbPCCDU-6iyD7HuzC3ySR5HQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjI0/NzU3LTE2NDUyOTc2/NzgtNjQ3NC5qcGVn.jpeg",
         format: "File, MP3, MiniAlbum",
