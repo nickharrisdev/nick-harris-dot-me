@@ -1,33 +1,36 @@
 import format from "date-fns/format";
 import Link from "next/link";
-import { DiscogService } from "../domain/services/discog-service";
 import { ShowService } from "../domain/services/show-service";
-import { DiscogsArtistDetails, DiscogsRelease } from "../domain/types/discogs.interface";
+import { Release } from "../domain/types/release.interface";
 import { Show } from "../domain/types/show.interface";
 import { getShowId } from "../lib/utilities/get-show-id";
 
-const discogService = new DiscogService()
 const showService = new ShowService();
 
-export default function List(props: {list?: Show[] | DiscogsRelease[], type?: string, artistDetails?: DiscogsArtistDetails}) {
+export default function List(props: {list?: Show[] | Release[], type?: string, creditedAs?: string}) {
   if (props.type === "artist-list") {
-    const artistDetails = props.artistDetails as DiscogsArtistDetails;
-    const releases = props.list as DiscogsRelease[]
+    const releases = props.list as Release[]
 
       return (
         <>
-          <h4 className="mt-1">Credited as {discogService.formatArtistName(artistDetails.name)}</h4>
-          <p className="mb-1">{props.list?.length} results</p>
+          <h4 className="mt-1">Credited as {props.creditedAs}</h4>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-3">
-          {releases?.map(({ id, title, artist, year, thumb }, index) => {
+          {releases?.map(({  title, artist, year, coverUrl, links }, index) => {
             return (
                 <div className="flex flex-col" key={index}>
-                  <a href={discogService.buildDiscogsHref(id, artist, title)} target="_blank" rel="noreferrer">
-                    <img src={thumb} alt="Album cover thumbnail" loading="lazy" className="shadow-md" width="170" height="auto" />
-                    <p className="mb-0">{title}</p>
-                  </a>
-                  <p className="mb-0">{discogService.formatArtistName(artist)}</p> 
+                  <span>
+                    <img src={coverUrl} alt="Album cover" loading="lazy" className="shadow-md" width="170" height="auto" />
+                    <p className="mb-0 font-bold">{title}</p>
+                  </span>
+                  <p className="mb-0">{artist}</p>
                   <p className="mb-0">({year})</p>
+                  {links && (
+                    <div className="flex gap-2 mt-1">
+                      {links.bandcamp && <a href={links.bandcamp} target="_blank" rel="noreferrer" className="text-xs text-gray-500 hover:text-gray-900">bandcamp</a>}
+                      {links.spotify && <a href={links.spotify} target="_blank" rel="noreferrer" className="text-xs text-gray-500 hover:text-gray-900">spotify</a>}
+                      {links.appleMusic && <a href={links.appleMusic} target="_blank" rel="noreferrer" className="text-xs text-gray-500 hover:text-gray-900">apple music</a>}
+                    </div>
+                  )}
                 </div>
             )})}
           </div>
