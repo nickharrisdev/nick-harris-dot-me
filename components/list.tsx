@@ -15,11 +15,11 @@ export default function List(props: {list?: Show[] | Release[], type?: string, c
         <>
           <h4 className="mt-1">Credited as {props.creditedAs}</h4>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-3">
-          {releases?.map(({  title, artist, year, coverUrl, links }, index) => {
+          {releases?.map(({ title, artist, year, coverUrl, image, links }, index) => {
             return (
                 <div className="flex flex-col" key={index}>
                   <span>
-                    <img src={coverUrl} alt="Album cover" loading="lazy" className="shadow-md" width="170" height="auto" />
+                    <img src={image ?? coverUrl} alt="Album cover" loading="lazy" className="shadow-md" width="170" height="auto" />
                     <p className="mb-0 font-bold">{title}</p>
                   </span>
                   <p className="mb-0">{artist}</p>
