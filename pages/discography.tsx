@@ -75,7 +75,7 @@ export default function Discography() {
       >
         <button
           onClick={() => setSelected(null)}
-          className="float-right bg-transparent border-none cursor-pointer text-base leading-none p-2 -mr-2 -mt-2"
+          className="float-right bg-transparent border-none cursor-pointer text-base leading-none p-3 -mr-3 -mt-3 focus-visible:outline-none"
           aria-label="Close"
         >
           ✕

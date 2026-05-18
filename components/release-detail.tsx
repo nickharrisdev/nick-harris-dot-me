@@ -5,7 +5,7 @@ export default function ReleaseDetail({ release }: { release: Release }) {
 
   return (
     <div>
-      <img src={image} alt={title} className="w-full mb-3 shadow-sm" />
+      <img src={image} alt={title} className="w-full mb-3 shadow-sm aspect-square object-cover" />
       <h3 className="mb-0">{title}</h3>
       <p className="mb-0">{artist}</p>
       <p className="mb-3">{year}</p>

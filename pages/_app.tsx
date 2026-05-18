@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Nick Harris</title>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();` }} />
         <meta name="description" content="Personal website of musician and software engineer Nick Harris" />
         <link
           rel="icon"

@@ -71,9 +71,12 @@ ul li {
 }
 
 .dark {
-  transition: ease-in-out 300ms;
   color: white;
   background-color: black;
+}
+
+html.dark-ready {
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 
 /* app container */
