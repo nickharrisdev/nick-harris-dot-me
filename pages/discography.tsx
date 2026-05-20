@@ -4,9 +4,8 @@ import ReleaseDetail from '../components/release-detail'
 import { discography } from '../domain/static-data/discography'
 import { Release } from '../domain/types/release.interface'
 
-const releases = discography
-  .flatMap(a => a.releases)
-  .sort((a, b) => b.year - a.year);
+const sortKey = (r: Release) => r.date ?? `${r.year}-00-00`;
+const releases = [...discography].sort((a, b) => sortKey(b).localeCompare(sortKey(a)));
 
 export default function Discography() {
   const [selected, setSelected] = useState<Release | null>(null);
