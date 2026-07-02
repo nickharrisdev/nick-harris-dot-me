@@ -3,6 +3,18 @@ import { Release } from '../types/release.interface';
 
 export const discography: Release[] = [
   {
+    title: "Faster Years",
+    artist: Groups.NickHarrisSolo,
+    year: 2026,
+    image: "/discog-images/faster-years.jpg",
+    format: "File, FLAC, Album",
+    label: "Not On Label (Self-released)",
+    role: "Main",
+    links: {
+      bandcamp: "https://yourfriendnick.bandcamp.com/album/faster-years"
+    }
+  },
+  {
     title: "PAPA DOUBLE ALBUM",
     artist: Groups.YMIAH,
     year: 2025,

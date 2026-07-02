@@ -6,6 +6,8 @@ export default function Links() {
     document.documentElement.classList.add("dark");
   })
   const linksData = [
+    {label: "NEW ALBUM: Faster Years", href: "https://yourfriendnick.bandcamp.com", emoji: "🎧"},
+    {label: "Broken Down music video", href: "https://www.youtube.com/watch?v=f2uJRP_yB98", emoji: "🎬"},
     {label: "Upcoming shows", href: "https://www.nickharris.me/shows", emoji: "🎸"}, 
     {label: "Website", href: "https://www.nickharris.me", emoji: "👨🏻‍💻"},   
   ]
