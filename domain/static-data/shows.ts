@@ -7,6 +7,20 @@ import { Show } from "../types/show.interface";
 // Add notes: {emoji: ""} to link to show notes
 
 const shows: Show[] = [
+    {
+    city: "Fox River Grove, IL",
+    venue: "ALL WAYS Art Gallery",
+    group: Groups.LK,
+    date: new Date("08/29/2026"),
+    link: "https://www.allwaysartgallery.com/"
+  },  
+  {
+    city: "Chicago, IL",
+    venue: "The Lowdown",
+    group: Groups.LK,
+    date: new Date("09/27/2025"),
+    link: "https://chicago.askapunk.net/"
+  },
   {
     city: "Chicago, IL",
     venue: "Bim Bom Studios",
