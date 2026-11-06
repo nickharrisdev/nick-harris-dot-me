@@ -7,6 +7,13 @@ import { Show } from "../types/show.interface";
 // Add notes: {emoji: ""} to link to show notes
 
 const shows: Show[] = [
+  {
+    city: "Chicago, IL",
+    venue: "Gman Tavern",
+    group: Groups.NickHarrisSolo,
+    date: new Date("12/17/2026"),
+    link: "https://gmantavern.com/event/off-belay-jessica-mindrum-nick-harris/"
+  },
     {
     city: "Fox River Grove, IL",
     venue: "ALL WAYS Art Gallery",
