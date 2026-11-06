@@ -6,7 +6,7 @@ export default function Links() {
     document.documentElement.classList.add("dark");
   })
   const linksData = [
-    {label: "TIX: Dec 17 @ Gman Tavern", href: "https://gmantavern.com/event/off-belay-jessica-mindrum-nick-harris/", emoji: "🎟️"},
+    {label: "TIX: Dec 17 @ Gman Tavern", href: "https://www.etix.com/ticket/p/46897526/?partner_id=100", emoji: "🎟️"},
     {label: "NEW ALBUM: Faster Years", href: "https://yourfriendnick.bandcamp.com", emoji: "🎧"},
     {label: "Why Try lyrics video", href: "https://www.youtube.com/watch?v=GEn1NRN2L1k", emoji: "🎨"},
     {label: "Broken Down music video", href: "https://www.youtube.com/watch?v=f2uJRP_yB98", emoji: "🎬"},
